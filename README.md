@@ -1,54 +1,75 @@
-[Excel to PDF .Net by SautinSoft](https://sautinsoft.com/products/excel-to-pdf/)  is 100% written in C# (.NET Framework and .NET Core) assembly which provides a wide set of API for developers. It gives your application the abilities of exporting any *.xls and *.xlsx (Excel 97 - 2019 workbook) to PDF, Word, RTF and DOCX formats. See details:</br>
+![Nuget](https://img.shields.io/nuget/v/SautinSoft.ExcelToPdf) ![Nuget](https://img.shields.io/nuget/dt/SautinSoft.ExcelToPdf) 
+![Passed](https://img.shields.io/badge/build-%20%E2%9C%93%202505%20tests%20passed%20(0%20failed)-logo=visualstudio) 
+![windows](https://img.shields.io/badge/%20-%20%E2%9C%93?logo=windows)
+![macOS](https://img.shields.io/badge/%20-%20%E2%9C%93?logo=apple)
+![linux](https://img.shields.io/badge/%20-%20%E2%9C%93?logo=linux&logoColor=white)
+![docker](https://img.shields.io/badge/%20-%20%E2%9C%93?logo=docker&logoColor=white)
+![aws](https://img.shields.io/badge/%20-%20%E2%9C%93?logo=amazonaws)
+![microsoftazure](https://img.shields.io/badge/%20-%20%E2%9C%93?logo=microsoftazure)
+# .NET SDK to convert Excel (xls, xlsx) to PDF
 
-Convert Excel to PDF.</br>
+![SautinSoft.ExcelToPdf](https://camo.githubusercontent.com/bdf42036000730cf887bd57a805ec6352bd4ed4a77a003e06f3a6784cdb93aa5/68747470733a2f2f7777772e73617574696e736f66742e636f6d2f6d656469612f6769746875622f642e706e67)
 
-Convert Excel to DOCX.</br>
+[SautinSoft.Excel](https://sautinsoft.com/products/excel-to-pdf/) is .NET assembly (SDK) to convert Excel (.xls and .xlsx) workbooks to PDF, RTF, DOCX, Word.
 
-Convert Excel to RTF.</br>
+## Quick links
 
-Split and merge PDF documents.</br>
++ [Developer Guide](https://sautinsoft.com/products/excel-to-pdf/help/net/getting-started/overview.php)
++ [API Reference](https://sautinsoft.com/products/excel-to-pdf/help/net/api-reference/html/N_SautinSoft.htm)
 
-It supports the conversion of *.xls and *.xlsx to PDF, Word, RTF, DOCX with:</br>
+## Top Features
+
++ [Convert Excel file to PDF file.](https://sautinsoft.com/products/excel-to-pdf/help/net/developer-guide/convert-excel-file-to-pdf-file-csharp-vb-net.php)
++ [Convert Excel file to DOCX file.](https://sautinsoft.com/products/excel-to-pdf/help/net/developer-guide/convert-excel-file-to-docx-file-csharp-vb-net.php)
++ [Split/Merge PDF files.](https://sautinsoft.com/products/excel-to-pdf/help/net/developer-guide/split-and-merge-pdf-csharp-vb-net.php)
 
 
-Full font and text formatting: colors, face, size, bold, italic, underline, strike, superscript, subscript.</br>
+## System Requirement
 
-Export of spreadsheets with preserving borders, background.</br>
+* .NET Framework 4.6.1 - 4.8.1
+* .NET Core 2.0 - 3.1, .NET 5, 6, 7
+* .NET Standard 2.0
+* Windows, Linux, macOS, Android, iOS.
 
-Hyperlinks and anchors.</br>
+## Getting Started with Excel to PDF .Net
 
-Special characters.</br>
+Are you ready to give Excel to PDF .NET a try? Simply execute `Install-Package sautinsoft.exceltopdf` from Package Manager Console in Visual Studio to fetch the NuGet package. If you already have Excel to PDF .NET and want to upgrade the version, please execute `Update-Package sautinsoft.exceltopdf` to get the latest version.
 
-Multiple worksheets in a single document.</br>
+## Convert XLS to PDF
 
-Various cell types: strings, numbers, dates, floating point.</br>
+```csharp
+ExcelToPdf x = new ExcelToPdf();
+// Set PDF as output format.
+x.OutputFormat = SautinSoft.ExcelToPdf.eOutputFormat.Pdf;
+string excelFile = Path.GetFullPath(@"..\..\test.xls");
+string pdfFile = Path.ChangeExtension(excelFile, ".pdf"); 
+x.ConvertFile(excelFile, pdfFile);
+```
+## Convert XLS to DOCX
 
-Merged cells, row and cell width and height.</br>
+```csharp
+ExcelToPdf x = new ExcelToPdf();
+// Set DOCX as output format.
+x.OutputFormat = SautinSoft.ExcelToPdf.eOutputFormat.Docx;
+string excelFile = Path.GetFullPath(@"..\..\test.xls");
+string docxFile = Path.ChangeExtension(excelFile, ".docx"); 
+x.ConvertFile(excelFile, docxFile);
+```
+## Merge PDF
 
-Formulas.</br>
-
-XLSX and XLS files protected by a password.</br>
-
-Export Excel workbooks in memory.</br>
-
-This repository contains [Examples for Excel to PDF .Net](https://sautinsoft.com/products/excel-to-pdf/examples/) to help you learn and write your own applications.
-
-<p align="center">
-
-  <a title="Download complete Excel to PDF .Net" href="https://sautinsoft.com/thankyou.php?download=exceltopdf_net.zip">
-	<img src="https://sautinsoft.com/images/zip_file_download.png" />
-  </a>
-</p>
-
-Directory | Description
---------- | -----------
-[Examples for Excel to PDF .Net](https://sautinsoft.com/products/excel-to-pdf/examples/) | A collection of C#, VB.NET, php examples that help you learn and explore the API features
-
+```csharp
+ExcelToPdf x = new ExcelToPdf();
+FileInfo pdfFile = new FileInfo(Path.ChangeExtension(excelFile, ".pdf"));
+string singlePdf = Path.Combine(pdfFile.Directory.FullName, "Single.pdf");
+x.MergePDFFileArrayToPDFFile(new string[] { pdfFile.FullName, pdfFile.FullName }, singlePdf);
+```
 
 ## Resources
 
 + **Website:** [www.sautinsoft.com](http://www.sautinsoft.com)
 + **Product Home:** [Excel to PDF .Net](https://sautinsoft.com/products/excel-to-pdf/)
-+ **Download:** [Download Excel to PDF .Net](https://sautinsoft.com/products/excel-to-pdf/download.php)
-+ **Documentation:** [Excel to PDF .Net Documentation API](https://sautinsoft.net/help/excel-to-pdf-net/html/getting-started.htm)
-+ **Support:** [You are always welcome at SautinSoft company with your feedback and questions, it helps us to work more effective!](https://sautinsoft.com/support.php)
++ [Download SautinSoft.ExcelToPdf](http://sautinsoft.com/products/excel-to-pdf/download.php)
++ [Developer Guide](https://sautinsoft.com/products/excel-to-pdf/help/net/getting-started/overview.php)
++ [API Reference](https://sautinsoft.com/products/excel-to-pdf/help/net/api-reference/html/N_SautinSoft.htm)
++ [Support Team](https://sautinsoft.com/support.php)
++ [License](https://sautinsoft.com/products/excel-to-pdf/help/net/getting-started/agreement.php)
