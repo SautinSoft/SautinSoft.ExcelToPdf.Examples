@@ -7,8 +7,9 @@
 ![aws](https://img.shields.io/badge/%20-%20%E2%9C%93?logo=amazonaws)
 ![microsoftazure](https://img.shields.io/badge/%20-%20%E2%9C%93?logo=microsoftazure)
 # .NET SDK to convert Excel (xls, xlsx) to PDF
+![Excel](https://user-images.githubusercontent.com/79837963/229030126-091cb2c1-5b13-4295-8f44-ed2b3e34aab1.png)
 
-![SautinSoft.ExcelToPdf](https://user-images.githubusercontent.com/79837963/228831570-da2eb909-bc91-404f-a339-0b812db0c50b.png)
+
 
 [SautinSoft.Excel](https://sautinsoft.com/products/excel-to-pdf/) is .NET assembly (SDK) to convert Excel (.xls and .xlsx) workbooks to PDF, RTF, DOCX, Word.
 
