@@ -7,48 +7,8 @@
 ![aws](https://img.shields.io/badge/%20-%20%E2%9C%93?logo=amazonaws)
 ![microsoftazure](https://img.shields.io/badge/%20-%20%E2%9C%93?logo=microsoftazure)
 # .NET SDK to convert Excel (xls, xlsx) to PDF
-<<<<<<< HEAD
-
-![SautinSoft.ExcelToPdf](https://camo.githubusercontent.com/bdf42036000730cf887bd57a805ec6352bd4ed4a77a003e06f3a6784cdb93aa5/68747470733a2f2f7777772e73617574696e736f66742e636f6d2f6d656469612f6769746875622f642e706e67)
-
-[SautinSoft.Excel](https://sautinsoft.com/products/excel-to-pdf/) is .NET assembly (SDK) to convert Excel (.xls and .xlsx) workbooks to PDF, RTF, DOCX, Word.
-
-## Quick links
-
-+ [Developer Guide](https://sautinsoft.com/products/excel-to-pdf/help/net/getting-started/overview.php)
-+ [API Reference](https://sautinsoft.com/products/excel-to-pdf/help/net/api-reference/html/N_SautinSoft.htm)
-
-## Top Features
-
-+ [Convert Excel file to PDF file.](https://sautinsoft.com/products/excel-to-pdf/help/net/developer-guide/convert-excel-file-to-pdf-file-csharp-vb-net.php)
-+ [Convert Excel file to DOCX file.](https://sautinsoft.com/products/excel-to-pdf/help/net/developer-guide/convert-excel-file-to-docx-file-csharp-vb-net.php)
-+ [Split/Merge PDF files.](https://sautinsoft.com/products/excel-to-pdf/help/net/developer-guide/split-and-merge-pdf-csharp-vb-net.php)
 
 
-## System Requirement
-
-* .NET Framework 4.6.1 - 4.8.1
-* .NET Core 2.0 - 3.1, .NET 5, 6, 7
-* .NET Standard 2.0
-* Windows, Linux, macOS, Android, iOS.
-
-## Getting Started with Excel to PDF .Net
-
-Are you ready to give Excel to PDF .NET a try? Simply execute `Install-Package sautinsoft.exceltopdf` from Package Manager Console in Visual Studio to fetch the NuGet package. If you already have Excel to PDF .NET and want to upgrade the version, please execute `Update-Package sautinsoft.exceltopdf` to get the latest version.
-
-## Convert XLS to PDF
-
-```csharp
-ExcelToPdf x = new ExcelToPdf();
-// Set PDF as output format.
-x.OutputFormat = SautinSoft.ExcelToPdf.eOutputFormat.Pdf;
-string excelFile = Path.GetFullPath(@"..\..\test.xls");
-string pdfFile = Path.ChangeExtension(excelFile, ".pdf"); 
-x.ConvertFile(excelFile, pdfFile);
-```
-## Convert XLS to DOCX
-
-=======
 ![Excel](https://user-images.githubusercontent.com/79837963/229030126-091cb2c1-5b13-4295-8f44-ed2b3e34aab1.png)
 
 
@@ -120,4 +80,4 @@ x.MergePDFFileArrayToPDFFile(new string[] { pdfFile.FullName, pdfFile.FullName }
 + [License](https://sautinsoft.com/products/excel-to-pdf/help/net/getting-started/agreement.php)
 =======
 + [License](https://sautinsoft.com/products/excel-to-pdf/help/net/getting-started/agreement.php)
->>>>>>> 890ff0d4f87949bf7daac597f8e082a938b7ba32
+
