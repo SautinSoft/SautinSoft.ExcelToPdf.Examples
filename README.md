@@ -30,7 +30,7 @@
 ## System Requirement
 
 * .NET Framework 4.6.1 - 4.8.1
-* .NET Core 2.0 - 3.1, .NET 5, 6, 7
+* .NET Core 2.0 - 3.1, .NET 5, 6, 7, 8
 * .NET Standard 2.0
 * Windows, Linux, macOS, Android, iOS.
 
@@ -50,7 +50,7 @@ x.ConvertFile(excelFile, pdfFile);
 ```
 ## Convert XLS to DOCX
 
->>>>>>> 890ff0d4f87949bf7daac597f8e082a938b7ba32
+
 ```csharp
 ExcelToPdf x = new ExcelToPdf();
 // Set DOCX as output format.
@@ -70,9 +70,9 @@ x.MergePDFFileArrayToPDFFile(new string[] { pdfFile.FullName, pdfFile.FullName }
 
 ## Resources
 
-+ **Website:** [www.sautinsoft.com](http://www.sautinsoft.com)
++ **Website:** [www.sautinsoft.com](https://www.sautinsoft.com)
 + **Product Home:** [Excel to PDF .Net](https://sautinsoft.com/products/excel-to-pdf/)
-+ [Download SautinSoft.ExcelToPdf](http://sautinsoft.com/products/excel-to-pdf/download.php)
++ [Download SautinSoft.ExcelToPdf](https://sautinsoft.com/products/excel-to-pdf/download.php)
 + [Developer Guide](https://sautinsoft.com/products/excel-to-pdf/help/net/getting-started/overview.php)
 + [API Reference](https://sautinsoft.com/products/excel-to-pdf/help/net/api-reference/html/N_SautinSoft.htm)
 + [Support Team](https://sautinsoft.com/support.php)
