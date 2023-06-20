@@ -16,7 +16,7 @@ Module Sample
         x.PageStyle.PageNumFormat.FontFace = "Arial"
         x.PageStyle.PageNumFormat.FontSize = 14
 
-        Dim excelFile As String = Path.GetFullPath("..\test.xlsx")
+        Dim excelFile As String = Path.GetFullPath("..\..\..\test.xlsx")
         Dim pdfFile As String = Path.ChangeExtension(excelFile, ".pdf")
 
         Try

@@ -18,9 +18,9 @@ Module Sample
 
         ' Let's create trace file.
         x.CreateTraceFile = True
-        x.TraceFilePath = Path.GetFullPath("..\trace.txt")
+        x.TraceFilePath = Path.GetFullPath("..\..\..\trace.txt")
 
-        Dim excelFile As String = Path.GetFullPath("..\test.xls")
+        Dim excelFile As String = Path.GetFullPath("..\..\..\test.xls")
         Dim rtfFile As String = Path.ChangeExtension(excelFile, ".rtf")
 
         Dim excelBytes() As Byte = File.ReadAllBytes(excelFile)
@@ -47,9 +47,9 @@ Module Sample
 
         ' Let's create trace file.
         x.CreateTraceFile = True
-        x.TraceFilePath = Path.GetFullPath("..\trace.txt")
+        x.TraceFilePath = Path.GetFullPath("..\..\..\trace.txt")
 
-        Dim excelFile As String = Path.GetFullPath("..\test.xls")
+        Dim excelFile As String = Path.GetFullPath("..\..\..\test.xls")
         Dim rtfFile As String = Path.ChangeExtension(excelFile, ".rtf")
         Dim rtfBytes() As Byte = Nothing
 

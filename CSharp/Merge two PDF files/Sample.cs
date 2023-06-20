@@ -21,7 +21,7 @@ namespace Sample
             // Let's convert only 3rd page.
             x.Sheets.Custom(new int[]{3});
 
-            string excelFile = Path.GetFullPath(@"..\..\test.xlsx");
+            string excelFile = Path.GetFullPath(@"..\..\..\test.xlsx");
             FileInfo pdfFile = new FileInfo(Path.ChangeExtension(excelFile, ".pdf"));
             string singlePdf = Path.Combine(pdfFile.Directory.FullName, "Single.pdf");
 

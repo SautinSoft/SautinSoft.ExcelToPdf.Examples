@@ -22,9 +22,9 @@ namespace Sample
 
             // Let's create trace file.
             x.CreateTraceFile = true;
-            x.TraceFilePath = Path.GetFullPath(@"..\..\trace.txt");
+            x.TraceFilePath = Path.GetFullPath(@"..\..\..\trace.txt");
 
-            string excelFile = Path.GetFullPath(@"..\..\test.xls");
+            string excelFile = Path.GetFullPath(@"..\..\..\test.xls");
             string rtfFile = Path.ChangeExtension(excelFile, ".rtf"); ;
 
             byte[] excelBytes = File.ReadAllBytes(excelFile);
@@ -54,9 +54,9 @@ namespace Sample
 
 			// Let's create trace file.
             x.CreateTraceFile = true;
-            x.TraceFilePath = Path.GetFullPath(@"..\..\trace.txt");
+            x.TraceFilePath = Path.GetFullPath(@"..\..\..\trace.txt");
 			
-            string excelFile = Path.GetFullPath(@"..\..\test.xls");
+            string excelFile = Path.GetFullPath(@"..\..\..\test.xls");
             string rtfFile = Path.ChangeExtension(excelFile, ".rtf");
             byte[] rtfBytes = null;
 

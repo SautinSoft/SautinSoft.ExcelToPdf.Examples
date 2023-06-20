@@ -15,7 +15,7 @@ Module Sample
         ' Let's convert only sheets: 1,3.
         x.Sheets.Custom(New Integer() {1, 3})
 
-        Dim excelFile As String = Path.GetFullPath("..\test.xlsx")
+        Dim excelFile As String = Path.GetFullPath("..\..\..\test.xlsx")
         Dim pdfFile As String = Path.ChangeExtension(excelFile, ".pdf")
 
         Try

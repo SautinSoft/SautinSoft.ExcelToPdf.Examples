@@ -9,7 +9,7 @@ namespace Sample
         private static void Main(string[] args)
         {
             //Prepare variables with path.
-            string excelFile = Path.GetFullPath(@"..\..\test.xlsx");
+            string excelFile = Path.GetFullPath(@"..\..\..\test.xlsx");
             string docxFile = Path.ChangeExtension(excelFile, ".docx"); ;
             string rtfFile = Path.ChangeExtension(excelFile, ".rtf"); ;
             string pdfFile = Path.ChangeExtension(excelFile, ".pdf"); ;

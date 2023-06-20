@@ -15,7 +15,7 @@ Module Sample
         ' Set PDF as output format.
         x.OutputFormat = SautinSoft.ExcelToPdf.eOutputFormat.Pdf
 
-        Dim excelFile As String = Path.GetFullPath("..\test.xlsx")
+        Dim excelFile As String = Path.GetFullPath("..\..\..\test.xlsx")
         Dim pdfFile As New FileInfo(Path.ChangeExtension(excelFile, ".pdf"))
 
         Try

@@ -14,7 +14,7 @@ namespace Sample
             // Set RTF as output format.
             x.OutputFormat = SautinSoft.ExcelToPdf.eOutputFormat.Rtf;
 
-            string excelFile = Path.GetFullPath(@"..\..\test.xls");
+            string excelFile = Path.GetFullPath(@"..\..\..\test.xls");
             string rtfFile = Path.ChangeExtension(excelFile, ".rtf"); ;
 
             try

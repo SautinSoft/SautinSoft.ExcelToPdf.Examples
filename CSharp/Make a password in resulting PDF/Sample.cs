@@ -21,7 +21,7 @@ namespace Sample
             // The password cannot be in PDF-A. Change to PDF 1.5.
             x.Options.PdfVersion = ExcelToPdf.COptions.ePdfVersion.PDF_15;
 
-            string excelFile = Path.GetFullPath(@"..\..\test.xlsx");
+            string excelFile = Path.GetFullPath(@"..\..\..\test.xlsx");
             string pdfFile = Path.ChangeExtension(excelFile, ".pdf"); ;
 
             try

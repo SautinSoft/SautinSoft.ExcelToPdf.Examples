@@ -18,7 +18,7 @@ Module Sample
         ' The password cannot be in PDF-A. Change to PDF 1.5.
         x.Options.PdfVersion = ExcelToPdf.COptions.ePdfVersion.PDF_15
 
-        Dim excelFile As String = Path.GetFullPath("..\test.xlsx")
+        Dim excelFile As String = Path.GetFullPath("..\..\..\test.xlsx")
         Dim pdfFile As String = Path.ChangeExtension(excelFile, ".pdf")
 
         Try

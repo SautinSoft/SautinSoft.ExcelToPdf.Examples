@@ -14,7 +14,7 @@ namespace Sample
             // Set DOCX as output format.
             x.OutputFormat = SautinSoft.ExcelToPdf.eOutputFormat.Docx;
 
-            string excelFile = Path.GetFullPath(@"..\..\test.xls");
+            string excelFile = Path.GetFullPath(@"..\..\..\test.xls");
             string docxFile = Path.ChangeExtension(excelFile, ".docx"); ;
 
             try

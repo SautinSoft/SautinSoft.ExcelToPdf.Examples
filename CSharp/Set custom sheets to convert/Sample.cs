@@ -18,7 +18,7 @@ namespace Sample
             // Let's convert only sheets: 1,3.
             x.Sheets.Custom(new int[] { 1, 3 });            
 
-            string excelFile = Path.GetFullPath(@"..\..\test.xlsx");
+            string excelFile = Path.GetFullPath(@"..\..\..\test.xlsx");
             string pdfFile = Path.ChangeExtension(excelFile, ".pdf"); ;
 
             try

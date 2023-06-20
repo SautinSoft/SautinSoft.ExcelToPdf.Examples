@@ -18,7 +18,7 @@ Module Sample
         ' Let's convert only 3rd page.
         x.Sheets.Custom(New Integer() {3})
 
-        Dim excelFile As String = Path.GetFullPath("..\test.xlsx")
+        Dim excelFile As String = Path.GetFullPath("..\..\..\test.xlsx")
         Dim pdfFile As New FileInfo(Path.ChangeExtension(excelFile, ".pdf"))
         Dim singlePdf As String = Path.Combine(pdfFile.Directory.FullName, "Single.pdf")
 

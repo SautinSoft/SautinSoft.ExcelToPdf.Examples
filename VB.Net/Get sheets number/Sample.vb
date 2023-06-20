@@ -8,7 +8,7 @@ Module Sample
         ' Get sheets number.
         Dim x As New ExcelToPdf()
 
-        Dim excelFile As New FileInfo("..\test.xlsx")
+        Dim excelFile As New FileInfo("..\..\..\test.xlsx")
 
         Try
             Dim sheets As Integer = x.GetSheetsNumber(excelFile.FullName)

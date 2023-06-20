@@ -11,7 +11,7 @@ Module Sample
         ' Set RTF as output format.
         x.OutputFormat = SautinSoft.ExcelToPdf.eOutputFormat.Rtf
 
-        Dim excelFile As String = Path.GetFullPath("..\test.xls")
+        Dim excelFile As String = Path.GetFullPath("..\..\..\test.xls")
         Dim rtfFile As String = Path.ChangeExtension(excelFile, ".rtf")
 
 

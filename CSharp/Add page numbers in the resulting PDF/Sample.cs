@@ -19,7 +19,7 @@ namespace Sample
             x.PageStyle.PageNumFormat.FontFace = "Arial";
             x.PageStyle.PageNumFormat.FontSize = 14;
 
-            string excelFile = Path.GetFullPath(@"..\..\test.xlsx");
+            string excelFile = Path.GetFullPath(@"..\..\..\test.xlsx");
             string pdfFile = Path.ChangeExtension(excelFile, ".pdf"); ;
 
             try

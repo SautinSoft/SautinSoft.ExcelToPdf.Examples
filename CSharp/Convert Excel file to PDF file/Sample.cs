@@ -14,7 +14,7 @@ namespace Sample
             // Set PDF as output format.
             x.OutputFormat = SautinSoft.ExcelToPdf.eOutputFormat.Pdf;
 
-            string excelFile = Path.GetFullPath(@"..\..\test.xls");
+            string excelFile = Path.GetFullPath(@"..\..\..\test.xls");
             string pdfFile = Path.ChangeExtension(excelFile, ".pdf"); ;
 
             try

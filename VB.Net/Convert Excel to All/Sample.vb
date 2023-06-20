@@ -6,7 +6,7 @@ Module Sample
     Sub Main()
 
         ' Prepare variables with path.
-        Dim excelFile As String = Path.GetFullPath("..\test.xlsx")
+        Dim excelFile As String = Path.GetFullPath("..\..\..\test.xlsx")
         Dim docxFile As String = Path.ChangeExtension(excelFile, ".docx")
         Dim rtfFile As String = Path.ChangeExtension(excelFile, ".rtf")
         Dim pdfFile As String = Path.ChangeExtension(excelFile, ".pdf")

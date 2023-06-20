@@ -11,7 +11,7 @@ namespace Sample
             // Get sheets number.
             ExcelToPdf x = new ExcelToPdf();
 
-            FileInfo excelFile = new FileInfo(@"..\..\test.xlsx");            
+            FileInfo excelFile = new FileInfo(@"..\..\..\test.xlsx");            
 
             try
             {
