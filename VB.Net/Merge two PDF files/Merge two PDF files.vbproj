@@ -13,10 +13,13 @@
     <Reference Include="SautinSoft.ExcelToPdf">
     <HintPath>..\..\..\Bin\.NET 6.0\SautinSoft.ExcelToPdf.dll</HintPath>
     </Reference>
-	<PackageReference Include="System.Drawing.Common" Version="4.7.0" />
-    <PackageReference Include="System.IO.Packaging" Version="4.4.0" />
-	<PackageReference Include="System.Text.Encoding.CodePages" Version="4.5.0" />
-    <PackageReference Include="System.Xml.XPath.XmlDocument" Version="4.3.0" />
+        <PackageReference Include="Microsoft.IO.RecyclableMemoryStream" Version="2.3.2" />
+		<PackageReference Include="System.Configuration.ConfigurationManager" Version="4.7.0" />
+		<PackageReference Include="System.Drawing.Common" Version="4.7.3" />
+		<PackageReference Include="System.IO.Packaging" Version="4.4.0" />
+		<PackageReference Include="System.Security.Cryptography.Pkcs" Version="4.7.0" />
+		<PackageReference Include="System.Text.Encoding.CodePages" Version="4.5.0" />
+		<PackageReference Include="System.Xml.XPath.XmlDocument" Version="4.3.0" />
 	</ItemGroup>
   </When>
     <!-- Need to conditionally bring in references for the NuGet target -->
@@ -27,3 +30,6 @@
   </When>
  </Choose>
 </Project>
+
+
+

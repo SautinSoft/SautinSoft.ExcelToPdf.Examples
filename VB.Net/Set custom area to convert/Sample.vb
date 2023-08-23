@@ -15,7 +15,7 @@ Module Sample
         ' Let's convert only rectangle from "B6" to "C9" on sheet 1.            
         x.Sheets.PrintArea.Add("B6", "C9", New Integer() {1})
 
-        Dim excelFile As String = Path.GetFullPath("..\..\..\test.xls")
+        Dim excelFile As String = Path.GetFullPath("..\..\..\test.xlsx")
         Dim pdfFile As String = Path.ChangeExtension(excelFile, ".pdf")
 
         Try

@@ -18,7 +18,7 @@ namespace Sample
             // Let's convert only rectangle from "B6" to "C9" on sheet 1.            
             x.Sheets.PrintArea.Add("B6", "C9", new int[]{1});
 
-            string excelFile = Path.GetFullPath(@"..\..\..\test.xls");
+            string excelFile = Path.GetFullPath(@"..\..\..\test.xlsx");
             string pdfFile = Path.ChangeExtension(excelFile, ".pdf"); ;
 
             try

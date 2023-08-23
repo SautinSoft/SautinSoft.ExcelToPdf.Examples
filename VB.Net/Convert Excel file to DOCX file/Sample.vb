@@ -11,7 +11,7 @@ Module Sample
         ' Set DOCX as output format.
         x.OutputFormat = SautinSoft.ExcelToPdf.eOutputFormat.Docx
 
-        Dim excelFile As String = Path.GetFullPath("..\..\..\test.xls")
+        Dim excelFile As String = Path.GetFullPath("..\..\..\test.xlsx")
         Dim docxFile As String = Path.ChangeExtension(excelFile, ".docx")
 
         Try
