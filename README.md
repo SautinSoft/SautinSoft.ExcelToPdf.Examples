@@ -76,8 +76,6 @@ x.MergePDFFileArrayToPDFFile(new string[] { pdfFile.FullName, pdfFile.FullName }
 + [Developer Guide](https://sautinsoft.com/products/excel-to-pdf/help/net/getting-started/overview.php)
 + [API Reference](https://sautinsoft.com/products/excel-to-pdf/help/net/api-reference/html/N_SautinSoft.htm)
 + [Support Team](https://sautinsoft.com/support.php)
-<<<<<<< HEAD
 + [License](https://sautinsoft.com/products/excel-to-pdf/help/net/getting-started/agreement.php)
-=======
 + [License](https://sautinsoft.com/products/excel-to-pdf/help/net/getting-started/agreement.php)
 
