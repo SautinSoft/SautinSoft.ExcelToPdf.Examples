@@ -6,7 +6,7 @@
 ![docker](https://img.shields.io/badge/%20-%20%E2%9C%93?logo=docker&logoColor=white)
 ![aws](https://img.shields.io/badge/%20-%20%E2%9C%93?logo=amazonaws)
 ![microsoftazure](https://img.shields.io/badge/%20-%20%E2%9C%93?logo=microsoftazure)
-# .NET SDK to convert Excel (xls, xlsx) to PDF
+# .NET SDK to convert Excel to PDF
 
 
 ![Excel](https://user-images.githubusercontent.com/79837963/229030126-091cb2c1-5b13-4295-8f44-ed2b3e34aab1.png)
