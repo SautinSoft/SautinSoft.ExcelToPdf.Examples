@@ -6,14 +6,14 @@
 ![docker](https://img.shields.io/badge/%20-%20%E2%9C%93?logo=docker&logoColor=white)
 ![aws](https://img.shields.io/badge/%20-%20%E2%9C%93?logo=amazonaws)
 ![microsoftazure](https://img.shields.io/badge/%20-%20%E2%9C%93?logo=microsoftazure)
-# .NET SDK to convert Excel (xls, xlsx) to PDF
+# .NET SDK to convert Excel to PDF
 
 
 ![Excel](https://user-images.githubusercontent.com/79837963/229030126-091cb2c1-5b13-4295-8f44-ed2b3e34aab1.png)
 
 
 
-[SautinSoft.Excel](https://sautinsoft.com/products/excel-to-pdf/) is .NET assembly (SDK) to convert Excel (.xls and .xlsx) workbooks to PDF, RTF, DOCX, Word.
+[SautinSoft.Excel](https://sautinsoft.com/products/excel-to-pdf/) is .NET assembly (SDK) to convert Excel  workbooks to PDF, RTF, DOCX, Word.
 
 ## Quick links
 
@@ -38,24 +38,24 @@
 
 Are you ready to give Excel to PDF .NET a try? Simply execute `Install-Package sautinsoft.exceltopdf` from Package Manager Console in Visual Studio to fetch the NuGet package. If you already have Excel to PDF .NET and want to upgrade the version, please execute `Update-Package sautinsoft.exceltopdf` to get the latest version.
 
-## Convert XLS to PDF
+## Convert XLSX to PDF
 
 ```csharp
 ExcelToPdf x = new ExcelToPdf();
 // Set PDF as output format.
 x.OutputFormat = SautinSoft.ExcelToPdf.eOutputFormat.Pdf;
-string excelFile = Path.GetFullPath(@"..\..\test.xls");
+string excelFile = Path.GetFullPath(@"..\..\test.xlsx");
 string pdfFile = Path.ChangeExtension(excelFile, ".pdf"); 
 x.ConvertFile(excelFile, pdfFile);
 ```
-## Convert XLS to DOCX
+## Convert XLSX to DOCX
 
 
 ```csharp
 ExcelToPdf x = new ExcelToPdf();
 // Set DOCX as output format.
 x.OutputFormat = SautinSoft.ExcelToPdf.eOutputFormat.Docx;
-string excelFile = Path.GetFullPath(@"..\..\test.xls");
+string excelFile = Path.GetFullPath(@"..\..\test.xlsx");
 string docxFile = Path.ChangeExtension(excelFile, ".docx"); 
 x.ConvertFile(excelFile, docxFile);
 ```
@@ -76,8 +76,6 @@ x.MergePDFFileArrayToPDFFile(new string[] { pdfFile.FullName, pdfFile.FullName }
 + [Developer Guide](https://sautinsoft.com/products/excel-to-pdf/help/net/getting-started/overview.php)
 + [API Reference](https://sautinsoft.com/products/excel-to-pdf/help/net/api-reference/html/N_SautinSoft.htm)
 + [Support Team](https://sautinsoft.com/support.php)
-<<<<<<< HEAD
 + [License](https://sautinsoft.com/products/excel-to-pdf/help/net/getting-started/agreement.php)
-=======
 + [License](https://sautinsoft.com/products/excel-to-pdf/help/net/getting-started/agreement.php)
 
