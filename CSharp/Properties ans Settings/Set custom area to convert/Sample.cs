@@ -8,14 +8,15 @@ namespace Sample
     {
         static void Main(string[] args)
         {
-            // Convert Excel file to PDF file
+            // Set custom area to convert.
             ExcelToPdf x = new ExcelToPdf();
+            x.PageStyle.PageSize.Letter();
 
             // Set PDF as output format.
             x.OutputFormat = SautinSoft.ExcelToPdf.eOutputFormat.Pdf;
-            // Set pdf out version as PDF_A
-            // The component can create PDF_A1, PDF_A2, etc
-            x.Options.PdfVersion = ExcelToPdf.COptions.ePdfVersion.PDF_A1a;
+
+            // Let's convert only rectangle from "B6" to "C9" on sheet 1.            
+            x.Sheets.PrintArea.Add("B6", "C9", new int[]{1});
 
             string excelFile = Path.GetFullPath(@"..\..\..\test.xlsx");
             string pdfFile = Path.ChangeExtension(excelFile, ".pdf"); ;

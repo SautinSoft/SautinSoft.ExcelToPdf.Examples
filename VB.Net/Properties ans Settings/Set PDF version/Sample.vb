@@ -13,7 +13,7 @@ Namespace Sample
 
 			' Set pdf out version as PDF_A
 			' The component can create PDF_A1, PDF_A2, etc
-			x.Options.PdfVersion = ExcelToPdf.COptions.ePdfVersion.PDF_A1
+			x.Options.PdfVersion = ExcelToPdf.COptions.ePdfVersion.PDF_A1a
 
 			Dim excelFile As String = Path.GetFullPath("..\..\..\test.xlsx")
 			Dim pdfFile As String = Path.ChangeExtension(excelFile, ".pdf")
