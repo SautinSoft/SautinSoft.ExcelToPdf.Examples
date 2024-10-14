@@ -1,0 +1,18 @@
+{
+  "profiles": {
+    "ConsoleApp": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "environmentVariables": {
+        "LD_DEBUG": "libs",
+        "LD_LIBRARY_PATH": "/app/bin/Debug/net6.0/runtimes/linux-x64/"
+      }
+    },
+    "WSL": {
+      "commandName": "WSL2",
+      "distributionName": ""
+    }
+  }
+}
