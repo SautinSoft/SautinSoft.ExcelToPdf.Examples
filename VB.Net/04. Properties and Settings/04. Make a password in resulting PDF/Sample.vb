@@ -5,6 +5,12 @@ Imports SautinSoft
 Module Sample
 
     Sub Main()
+	
+		' Before starting, we recommend to get a free 100-day key:
+        ' https://sautinsoft.com/start-for-free/
+            
+        ' Apply the key here:
+		' SautinSoft.ExcelToPdf.SetLicense("...");
         ' Make a password in resulting PDF
         Dim x As New ExcelToPdf()
 

@@ -5,6 +5,12 @@ Imports SautinSoft
 Namespace Sample
 	Friend Class Sample
 		Shared Sub Main(ByVal args() As String)
+		
+		' Before starting, we recommend to get a free 100-day key:
+        ' https://sautinsoft.com/start-for-free/
+            
+        ' Apply the key here:
+		' SautinSoft.ExcelToPdf.SetLicense("...");
 			' Convert Excel file to PDF file
 			Dim x As New ExcelToPdf()
 

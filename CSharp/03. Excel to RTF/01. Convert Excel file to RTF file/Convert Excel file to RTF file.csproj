@@ -8,13 +8,6 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="SautinSoft.ExcelToPdf" Version="*" />
-	<PackageReference Include="SkiaSharp" Version="2.88.8" />
-    <PackageReference Include="SkiaSharp.NativeAssets.Linux" Version="2.88.8" />  
-    <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.7.0" />
-	<PackageReference Include="System.Drawing.Common" Version="4.7.3" />
-	<PackageReference Include="System.IO.Packaging" Version="4.4.0" />
-	<PackageReference Include="System.Text.Encoding.CodePages" Version="4.5.0" />
-	<PackageReference Include="System.Xml.XPath.XmlDocument" Version="4.3.0" />
   </ItemGroup>
   </Project>
   

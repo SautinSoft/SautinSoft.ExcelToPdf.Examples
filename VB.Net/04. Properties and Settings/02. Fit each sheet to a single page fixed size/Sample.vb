@@ -5,6 +5,12 @@ Imports SautinSoft
 Module Sample
 
     Sub Main()
+	
+		' Before starting, we recommend to get a free 100-day key:
+        ' https://sautinsoft.com/start-for-free/
+            
+        ' Apply the key here:
+		' SautinSoft.ExcelToPdf.SetLicense("...");
 
         ' Fit each sheet to a single page fixed size.
         Dim x As New ExcelToPdf()
