@@ -1,24 +1,27 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ASP.Net - Export Excel to PDF", ".", "{9ADC096C-CD7F-40D9-8F11-120023EAEA8E}"
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "04. ASP.Net - Export Excel to PDF", ".", "{9ADC096C-CD7F-40D9-8F11-120023EAEA8E}"
 	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.2"
 		Debug.AspNetCompiler.VirtualPath = "/ASP.Net - Export Excel to PDF"
-		Debug.AspNetCompiler.PhysicalPath = "..\ASP.Net - Export Excel to PDF\"
+		Debug.AspNetCompiler.PhysicalPath = "..\04. ASP.Net - Export Excel to PDF\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\ASP.Net - Export Excel to PDF\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
 		Release.AspNetCompiler.VirtualPath = "/ASP.Net - Export Excel to PDF"
-		Release.AspNetCompiler.PhysicalPath = "..\ASP.Net - Export Excel to PDF\"
+		Release.AspNetCompiler.PhysicalPath = "..\04. ASP.Net - Export Excel to PDF\"
 		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\ASP.Net - Export Excel to PDF\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "49289"
+		SlnRelativePath = "..\04. ASP.Net - Export Excel to PDF\"
 		DefaultWebSiteLanguage = "Visual Basic"
 	EndProjectSection
 EndProject
@@ -31,5 +34,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C5DCC6A4-8FDA-4A0E-A29F-70DED948CFAD}
 	EndGlobalSection
 EndGlobal

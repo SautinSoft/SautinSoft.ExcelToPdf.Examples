@@ -32,7 +32,7 @@
               <p>Excel to PDF .Net is a standalone C# library to convert Excel spreadsheets and workbooks to PDF, Word, RTF, DOCX.</p>
               <p>This sample shows how to export Excel workbook to PDF in memory.</p>
               <div class="form-row">
-                  <h2 class="p-2">Please select any Excel file (*.xlsx):</h2>
+                  <h2 class="p-2">Please select any Excel file (*.xlsx, *.xls):</h2>
                   <div class="form-group col-lg-8 col-md-6 col-sm-12">
                       <div class="input-group mb-3" lang="en">
                          <div class="custom-file">
