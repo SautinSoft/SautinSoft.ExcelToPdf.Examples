@@ -1,7 +1,6 @@
-﻿// Get your free 30-day key here:   
+﻿// Get your free key here:   
 // https://sautinsoft.com/start-for-free/
 
-//using SautinSoft.Pdf;
 using SautinSoft;
 
 // Convert Excel to PDF in memory
@@ -31,7 +30,3 @@ catch (Exception ex)
     Console.WriteLine(ex.Message);
     Console.ReadLine();
 }
-
-
-  //  using var saveFileStream = File.Create("result.pdf");
-

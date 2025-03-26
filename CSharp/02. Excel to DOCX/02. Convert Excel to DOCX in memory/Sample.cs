@@ -13,7 +13,7 @@ namespace Sample
         }
         public static void ConvertExcelAsByteArray()
         {
-			// Before starting, we recommend to get a free 100-day key:
+			// Before starting, we recommend to get a free key:
             // https://sautinsoft.com/start-for-free/
             
             // Apply the key here:
@@ -46,7 +46,7 @@ namespace Sample
         }
         public static void ConvertExcelAsMemoryStream()
         {
-			// Before starting, we recommend to get a free 100-day key:
+			// Before starting, we recommend to get a free key:
             // https://sautinsoft.com/start-for-free/
             
             // Apply the key here:
