@@ -1,0 +1,1386 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>SautinSoft.ExcelToPdf</name>
+  </assembly>
+  <members>
+    <!-- Badly formed XML comment ignored for member "P:SautinSoft.Document.Drawing.Vector.Length" -->
+    <!-- Badly formed XML comment ignored for member "P:SautinSoft.Document.Drawing.Vector.LengthSquared" -->
+    <!-- Badly formed XML comment ignored for member "M:SautinSoft.Excel.ExcelColumn.AutoFitAdvanced(System.Single)" -->
+    <member name="T:SautinSoft.ExcelToPdf">
+      <summary>
+            Main class to export Excel Excels in to PDF, Word. Allows to create an instance of converter object and call converting methods.
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\Excel to PDF .Net\Code samples\CSharp\01. Excel to PDF\04. ASP.Net - Export Excel to PDF\Default.aspx.cs" title="ASP.Net - Export Excel to PDF in C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\Excel to PDF .Net\Code samples\VB.Net\01. Excel to PDF\04. ASP.Net - Export Excel to PDF\Default.aspx.vb" title="ASP.Net - Export Excel to PDF in VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.ExcelToPdf.#ctor">
+      <summary>
+            Creates a new instance of <see cref="T:SautinSoft.ExcelToPdf" /> class
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\Excel to PDF .Net\Code samples\CSharp\02. Excel to DOCX\02. Convert Excel to DOCX in memory\Sample.cs" title="Convert Excel to DOCX in memory using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\Excel to PDF .Net\Code samples\VB.Net\02. Excel to DOCX\02. Convert Excel to DOCX in memory\Sample.vb" title="Convert Excel to DOCX in memory using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="P:SautinSoft.ExcelToPdf.Sheets">
+      <summary>
+            Set custom sheets for converting. By default all sheets from workbook will be converted.
+            </summary>
+      <remarks>You may specify: all, even, odd and custom sheets. For example:<br /><br /></remarks>
+      <example>
+        <code lang="cs" source="..\Packages\Excel to PDF .Net\Code samples\CSharp\04. Properties and Settings\06. Set custom sheets to convert\Sample.cs" title="Convert custom Excel sheets to PDF using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\Excel to PDF .Net\Code samples\VB.Net\04. Properties and Settings\06. Set custom sheets to convert\Sample.vb" title="Convert custom Excel sheets to PDF using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="P:SautinSoft.ExcelToPdf.Options">
+      <summary>
+            Set up the info block properties for resulting documents, such as file version and a document producer.
+            </summary>
+    </member>
+    <member name="P:SautinSoft.ExcelToPdf.PageStyle">
+      <summary>
+            Contains page properties for output PDF document: page size, orientation, page margins and put page numbers.
+            </summary>
+    </member>
+    <member name="P:SautinSoft.ExcelToPdf.Serial">
+      <summary>
+            A string which contains a serial number to activate your copy after purchasing. Use it when you got own serial number and registered version.
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\Excel to PDF .Net\Code samples\CSharp\05. Product Activation\01. How to activate the product\Sample.cs" title="Activate the component after purchasing in C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\Excel to PDF .Net\Code samples\VB.Net\05. Product Activation\01. How to activate the product\Sample.vb" title="Activate the component after purchasing in VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="P:SautinSoft.ExcelToPdf.ColumnsToConvertLimit">
+      <summary>
+            The number of maximum processed columns in the table.
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\Excel to PDF .Net\Code samples\CSharp\05. Product Activation\01. How to activate the product\Sample.cs" title="Activate the component after purchasing in C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\Excel to PDF .Net\Code samples\VB.Net\05. Product Activation\01. How to activate the product\Sample.vb" title="Activate the component after purchasing in VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.ExcelToPdf.SetLicense(System.String)">
+      <summary>
+            A string which contains a serial number to activate your copy after purchasing. Use it when you got own serial number and registered version.
+            <param name="Serial">SetLicense("1234567890")</param></summary>
+      <example>
+        <code lang="cs" source="..\Packages\Excel to PDF .Net\Code samples\CSharp\05. Product Activation\01. How to activate the product\Sample.cs" title="Activate the component after purchasing in C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\Excel to PDF .Net\Code samples\VB.Net\05. Product Activation\01. How to activate the product\Sample.vb" title="Activate the component after purchasing in VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="P:SautinSoft.ExcelToPdf.TraceFilePath">
+      <summary>
+            Path to create a tracing file. Allows to track issues and exceptions which appeared during the conversion cycle. Default value: "C:\trace.txt"
+            </summary>
+    </member>
+    <member name="P:SautinSoft.ExcelToPdf.CreateTraceFile">
+      <summary>
+            Gets or sets whether to create a trace file. Default value: false. 
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\Excel to PDF .Net\Code samples\CSharp\03. Excel to RTF\02. Convert Excel to RTF in memory\Sample.cs" title="Convert Excel to RTF in memory using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\Excel to PDF .Net\Code samples\VB.Net\03. Excel to RTF\02. Convert Excel to RTF in memory\Sample.vb" title="Convert Excel to RTF in memory using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="P:SautinSoft.ExcelToPdf.OutputFormat">
+      <summary>
+            Specify format for output file: PDF, Word, RTF etc. Default value: <see cref="F:SautinSoft.ExcelToPdf.eOutputFormat.Pdf" />.
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\Excel to PDF .Net\Code samples\CSharp\03. Excel to RTF\01. Convert Excel file to RTF file\Sample.cs" title="Convert Excel file to RTF file in C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\Excel to PDF .Net\Code samples\VB.Net\03. Excel to RTF\01. Convert Excel file to RTF file\Sample.vb" title="Convert Excel file to RTF file in VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="F:SautinSoft.ExcelToPdf.XlsxFormat">
+      <summary>
+            Get or set the flag that the format of the input file is xlsx.(else xls) Defaut: true.
+            </summary>
+    </member>
+    <member name="P:SautinSoft.ExcelToPdf.UnicodeOptions">
+      <summary>
+            Allows to specify options to properly convert Unicode, such as "Fonts" directory etc
+            </summary>
+      <remarks>
+        <b>Advice for developers who creates ASP.Net or Silverlight projects:</b>
+        <br />
+        <br />
+            Some hosting providers disables any access to windows directories. For example, GoDaddy doesn't allow to read directory "Windows\Fonts". <br />
+            We recommend to create own "Fonts" directory in your project and copy *.ttf files to it from "Windows\Fonts". You may copy only several fonts, but we recommend to put the font "Arial Unicode MS" - ARIALUNI.TTF anyway.<br /><br />
+            See picture:<br /><br /></remarks>
+    </member>
+    <member name="T:SautinSoft.ExcelToPdf.CSheet">
+      <summary>
+            Class which allows to set custom sheets from workbook for converting
+            </summary>
+    </member>
+    <member name="P:SautinSoft.ExcelToPdf.CSheet.PrintArea">
+      <summary>
+            Set custom cells which will be exported into PDF or Word.
+            </summary>
+      <example>
+        <code lang="cs">
+            SautinSoft.ExcelToPdf x = new SautinSoft.ExcelToPdf();
+            x.OutputFormat = SautinSoft.ExcelToPdf.eOutputFormat.Pdf;
+            int[] arJ = { 1 };
+            x.Sheets.PrintArea.Add("B20", "D25", arJ);
+            </code>
+        <code lang="vbnet">
+            Dim x As New SautinSoft.ExcelToPdf()
+            x.OutputFormat = SautinSoft.ExcelToPdf.eOutputFormat.Pdf;
+            Dim arJ() As Integer = { 1 }
+            x.Sheets.PrintArea.Add("B20", "D25", arJ)
+            </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.ExcelToPdf.CSheet.#ctor">
+      <summary>
+            Creates object of class CSheet. By default all sheets from workbook will be converted
+            </summary>
+    </member>
+    <member name="M:SautinSoft.ExcelToPdf.CSheet.All">
+      <summary>
+            Convert all sheets from workbook
+            </summary>
+      <example>
+        <code lang="cs">
+            SautinSoft.ExcelToPdf x = new SautinSoft.ExcelToPdf();
+            x.Sheets.All();
+            x.ConvertFile(@"d:\Workbook.xls", @"d:\Hardcopy.pdf");
+            </code>
+        <code lang="vbnet">
+            Dim x As New SautinSoft.ExcelToPdf()
+            x.Sheets.All()
+            x.ConvertFile("d:\Workbook.xls", "d:\Hardcopy.pdf")
+            </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.ExcelToPdf.CSheet.Odd">
+      <summary>
+            Convert odd sheets from workbook
+            </summary>
+      <example>
+        <code lang="cs">
+            SautinSoft.ExcelToPdf x = new SautinSoft.ExcelToPdf();
+            x.Sheets.Odd();
+            x.ConvertFile(@"d:\Workbook.xls", @"d:\Hardcopy.pdf");
+            </code>
+        <code lang="vbnet">
+            Dim x As New SautinSoft.ExcelToPdf()
+            x.Sheets.Odd()
+            x.ConvertFile("d:\Workbook.xls", "d:\Hardcopy.pdf")
+            </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.ExcelToPdf.CSheet.Even">
+      <summary>
+            Convert even sheets from workbook
+            </summary>
+      <example>
+        <code lang="cs">
+            SautinSoft.ExcelToPdf x = new SautinSoft.ExcelToPdf();
+            x.Sheets.Even();
+            x.ConvertFile(@"d:\Workbook.xls", @"d:\Hardcopy.pdf");
+            </code>
+        <code lang="vbnet">
+            Dim x As New SautinSoft.ExcelToPdf()
+            x.Sheets.Even()
+            x.ConvertFile("d:\Workbook.xls", "d:\Hardcopy.pdf")
+            </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.ExcelToPdf.CSheet.Custom(System.Int32[])">
+      <summary>
+            Convert custom sheets from workbook
+            </summary>
+      <param name="sheets">Array of sheets</param>
+      <example>
+        <code lang="cs" title="Specify custom sheets of workbook for converting">
+            SautinSoft.ExcelToPdf x = new SautinSoft.ExcelToPdf();
+            x.Sheets.Custom(new int[] { 1, 3 });
+            x.ConvertFile(@"d:\Workbook.xls", @"d:\Hardcopy.pdf");
+            </code>
+        <code lang="vbnet" title="Specify custom sheets of workbook for converting">
+            Dim x As New SautinSoft.ExcelToPdf()
+            x.Sheets.Custom(New Integer() { 1, 3 })
+            x.ConvertFile("d:\Workbook.xls", "d:\Hardcopy.pdf")
+            </code>
+      </example>
+    </member>
+    <member name="T:SautinSoft.ExcelToPdf.CSheet.PrintedArea">
+      <summary>
+            Allows to specify which custom sheets and cells will be exported into PDF, Word
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\Excel to PDF .Net\Code samples\CSharp\04. Properties and Settings\05. Set custom area to convert\Sample.cs" title="Export to PDF only custom area from sheet in C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\Excel to PDF .Net\Code samples\VB.Net\04. Properties and Settings\05. Set custom area to convert\Sample.vb" title="Export to PDF only custom area from sheet in VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.ExcelToPdf.CSheet.PrintedArea.#ctor">
+      <summary>
+            Creates a new instance of <see cref="T:SautinSoft.ExcelToPdf.CSheet.PrintedArea" /> class
+            </summary>
+    </member>
+    <member name="M:SautinSoft.ExcelToPdf.CSheet.PrintedArea.Add(System.String,System.String,System.Int32[])">
+      <summary>
+            Adds custom area to export in PDF, Word
+            </summary>
+      <param name="Cord1">Top-Left cell of area, for example "A1"</param>
+      <param name="Cord2">Right-Bottom cell of area, for example "E12"</param>
+      <param name="SheetNums">Array with sheets numbers</param>
+      <example>
+        <code lang="cs">
+            SautinSoft.ExcelToPdf x = new SautinSoft.ExcelToPdf();
+            x.OutputFormat = SautinSoft.ExcelToPdf.eOutputFormat.Pdf;
+            int[] arJ = { 1 };
+            x.Sheets.PrintArea.Add("B20", "D25", arJ);
+            </code>
+        <code lang="vbnet">
+            Dim x As New SautinSoft.ExcelToPdf()
+            x.OutputFormat = SautinSoft.ExcelToPdf.eOutputFormat.Pdf;
+            Dim arJ() As Integer = { 1 }
+            x.Sheets.PrintArea.Add("B20", "D25", arJ)
+            </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.ExcelToPdf.CSheet.PrintedArea.Add(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32[])">
+      <summary>
+            Adds custom area to export in PDF, Word by column and row numbers.
+            </summary>
+      <param name="Col1">Top cell number</param>
+      <param name="Row1">Top row number</param>
+      <param name="Col2">Bottom cell number</param>
+      <param name="Row2">Bottom row number</param>
+      <param name="SheetNums">Array with sheets numbers</param>
+      <example>
+        <code lang="cs">
+            SautinSoft.ExcelToPdf x = new SautinSoft.ExcelToPdf();
+            x.OutputFormat = SautinSoft.ExcelToPdf.eOutputFormat.Pdf;
+            int[] arJ = { 1 };
+            x.Sheets.PrintArea.Add(1, 20, 4, 25, arJ); // same as x.Sheets.PrintArea.Add("A20", "D25", arJ);
+            
+            </code>
+        <code lang="vbnet">
+            Dim x As New SautinSoft.ExcelToPdf()
+            x.OutputFormat = SautinSoft.ExcelToPdf.eOutputFormat.Pdf;
+            Dim arJ() As Integer = { 1 }
+            x.Sheets.PrintArea.Add(20, 1, 25, 4, arJ)
+            </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.ExcelToPdf.CSheet.PrintedArea.Clear">
+      <summary>
+            Mark all sheets and cells in workbook to export into PDF, Word
+            </summary>
+    </member>
+    <member name="T:SautinSoft.ExcelToPdf.CPageStyle">
+      <summary>
+            Allows to specify page properties for output PDF document: page size, orientation, page margins and page numbers
+            </summary>
+    </member>
+    <member name="T:SautinSoft.ExcelToPdf.CPageStyle.CPageScale">
+      <summary>
+            Allows to set scale produced document. Default option: <see cref="M:SautinSoft.ExcelToPdf.CPageStyle.CPageScale.FitByWidth" />.
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\Excel to PDF .Net\Code samples\CSharp\04. Properties and Settings\02. Fit each sheet to a single page fixed size\Sample.cs" title="Fit each sheet to a single PDF page fixed size in C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\Excel to PDF .Net\Code samples\VB.Net\04. Properties and Settings\02. Fit each sheet to a single page fixed size\Sample.vb" title="Fit each sheet to single a PDF page fixed size in VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.ExcelToPdf.CPageStyle.CPageScale.Percent(System.Int32)">
+      <summary>
+            Allows to specify page scale in percentages: from 1...10000.
+            </summary>
+      <param name="percents">The scale value in percentages</param>
+      <remarks>
+            Please notice that page margins will not be scaled. So, to get the proportional scale, please set all page margins to 0.
+            </remarks>
+    </member>
+    <member name="M:SautinSoft.ExcelToPdf.CPageStyle.CPageScale.Auto">
+      <summary>
+            Convert without any scaling.
+            </summary>
+    </member>
+    <member name="M:SautinSoft.ExcelToPdf.CPageStyle.CPageScale.FitByWidth">
+      <summary>
+            Fit each Excel sheet to a one PDF page depending of the page width. Thus, either to decrease the scale or leave as is if sheet could be fitted by page width. This is the default option.
+            </summary>
+    </member>
+    <member name="M:SautinSoft.ExcelToPdf.CPageStyle.CPageScale.ScaleByWidth">
+      <summary>
+            Make the scale the same as PDF page width. Thus, either to decrease or to increase scale.
+            </summary>
+    </member>
+    <member name="M:SautinSoft.ExcelToPdf.CPageStyle.CPageScale.FitByHeight">
+      <summary>
+            Fit each Excel sheet to a one PDF page depending of the page height. Thus, either to decrease the scale or leave as is if sheet could be fitted by page height.
+            </summary>
+    </member>
+    <member name="M:SautinSoft.ExcelToPdf.CPageStyle.CPageScale.ScaleByHeight">
+      <summary>
+            Make the scale the same as PDF page height. Thus, either to decrease or to increase scale.
+            </summary>
+    </member>
+    <member name="M:SautinSoft.ExcelToPdf.CPageStyle.CPageScale.ScaleToOnePage">
+      <summary>
+            Make the scale close as possible to page size to fit the sheet into a single page. Simultaneously takes care of page width and height.
+            </summary>
+    </member>
+    <member name="M:SautinSoft.ExcelToPdf.CPageStyle.CPageScale.ScaleByPageBreak">
+      <summary>
+            Convert with page break in excel document.
+            </summary>
+    </member>
+    <member name="T:SautinSoft.ExcelToPdf.CPageStyle.CPageSize">
+      <summary>
+            Allows to set page size for output PDF document. Default option: <see cref="M:SautinSoft.ExcelToPdf.CPageStyle.CPageSize.Auto" /></summary>
+      <example>
+        <code lang="cs" source="..\Packages\Excel to PDF .Net\Code samples\CSharp\04. Properties and Settings\08. Specify page size and margins\Sample.cs" title="Specify page size and margins for the output PDF document in C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\Excel to PDF .Net\Code samples\VB.Net\04. Properties and Settings\08. Specify page size and margins\Sample.vb" title="Specify page size and margins for the output PDF document in VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.ExcelToPdf.CPageStyle.CPageSize.#ctor">
+      <summary>
+            Creates an instance of <see cref="T:SautinSoft.ExcelToPdf.CPageStyle.CPageSize" /></summary>
+    </member>
+    <member name="M:SautinSoft.ExcelToPdf.CPageStyle.CPageSize.Widthmm(System.Single)">
+      <summary>
+            Set page width in mm
+            </summary>
+      <param name="valuePageWidth">page width in mm</param>
+    </member>
+    <member name="M:SautinSoft.ExcelToPdf.CPageStyle.CPageSize.WidthInch(System.Single)">
+      <summary>
+            Set page width in inches
+            </summary>
+      <param name="valuePageWidth">width in inches</param>
+    </member>
+    <member name="M:SautinSoft.ExcelToPdf.CPageStyle.CPageSize.Heightmm(System.Single)">
+      <summary>
+            Set page height in mm
+            </summary>
+      <param name="valuePageHeight">page height in mm</param>
+    </member>
+    <member name="M:SautinSoft.ExcelToPdf.CPageStyle.CPageSize.HeightInch(System.Single)">
+      <summary>
+            Set page height in inches
+            </summary>
+      <param name="valuePageHeight">height in inches</param>
+    </member>
+    <member name="M:SautinSoft.ExcelToPdf.CPageStyle.CPageSize.Auto">
+      <summary>
+            Auto-detect page size from work-area of Excel worksheet
+            </summary>
+      <remarks>The page will have size that all cells from sheet could be placed into page completely<br /><br /></remarks>
+    </member>
+    <member name="M:SautinSoft.ExcelToPdf.CPageStyle.CPageSize.A3">
+      <summary>
+            Set A3 page size, 297 x 420 mm, 11.69 x 16.54 In
+            </summary>
+    </member>
+    <member name="M:SautinSoft.ExcelToPdf.CPageStyle.CPageSize.A4">
+      <summary>
+            Set A4 page size, 210 x 297 mm, 8.26 x 11.69 In
+            </summary>
+    </member>
+    <member name="M:SautinSoft.ExcelToPdf.CPageStyle.CPageSize.A5">
+      <summary>
+            Set A5 page size, 148 x 210 mm, 5.82 x 8.26 In
+            </summary>
+    </member>
+    <member name="M:SautinSoft.ExcelToPdf.CPageStyle.CPageSize.A6">
+      <summary>
+            Set A6 page size, 105 x 148 mm, 4.13 x 5.82 In 
+            </summary>
+    </member>
+    <member name="M:SautinSoft.ExcelToPdf.CPageStyle.CPageSize.B5Jis">
+      <summary>
+            Set B5Jis page size, 182 x 257 mm, 7.16 x 10.11 In
+            </summary>
+    </member>
+    <member name="M:SautinSoft.ExcelToPdf.CPageStyle.CPageSize.B5Iso">
+      <summary>
+            Set B5Iso page size, 176 x 250 mm, 6.93 x 9.83 In
+            </summary>
+    </member>
+    <member name="M:SautinSoft.ExcelToPdf.CPageStyle.CPageSize.B6">
+      <summary>
+            Set B6 page size, 125 x 176 mm 
+            </summary>
+    </member>
+    <member name="M:SautinSoft.ExcelToPdf.CPageStyle.CPageSize.Folio">
+      <summary>
+            Set Folio page size, 210 x 330 mm, 8.26 x 12.99 In 
+            </summary>
+    </member>
+    <member name="M:SautinSoft.ExcelToPdf.CPageStyle.CPageSize.Letter">
+      <summary>
+            Set Letter size, 216 x 279 mm, 8.5 x 11 In.
+            </summary>
+    </member>
+    <member name="M:SautinSoft.ExcelToPdf.CPageStyle.CPageSize.Legal">
+      <summary>
+            Set Legal page size, 216 x 356 mm, 8.5 x 14 In
+            </summary>
+    </member>
+    <member name="M:SautinSoft.ExcelToPdf.CPageStyle.CPageSize.Statement">
+      <summary>
+            Set Statement page size, 140 x 216 mm, 5.5 x 8.5 In
+            </summary>
+    </member>
+    <member name="M:SautinSoft.ExcelToPdf.CPageStyle.CPageSize.Executive">
+      <summary>
+            Set Executive page size, 184 x 267 mm, 7.25 x 10.5 In 
+            </summary>
+    </member>
+    <member name="M:SautinSoft.ExcelToPdf.CPageStyle.CPageSize.Oficio2">
+      <summary>
+            Set Oficio2 page size, 216 x 330 mm, 8.5 x 13 In
+            </summary>
+    </member>
+    <member name="T:SautinSoft.ExcelToPdf.CPageStyle.CPageMargin">
+      <summary>
+            Allows to set page margins in mm and inches
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\Excel to PDF .Net\Code samples\CSharp\04. Properties and Settings\08. Specify page size and margins\Sample.cs" title="Specify page size and margins for the output PDF document in C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\Excel to PDF .Net\Code samples\VB.Net\04. Properties and Settings\08. Specify page size and margins\Sample.vb" title="Specify page size and margins for the output PDF document in VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.ExcelToPdf.CPageStyle.CPageMargin.#ctor">
+      <summary>
+            Creates a new instance of <see cref="T:SautinSoft.ExcelToPdf.CPageStyle.CPageMargin" /> class. Default value: 20 millimeters.
+            </summary>
+    </member>
+    <member name="M:SautinSoft.ExcelToPdf.CPageStyle.CPageMargin.Inch(System.Single)">
+      <summary>
+            Set value of page margin in inches
+            </summary>
+      <param name="valueInchMargin">value in inches</param>
+    </member>
+    <member name="M:SautinSoft.ExcelToPdf.CPageStyle.CPageMargin.mm(System.Single)">
+      <summary>
+            Set value of page margin in mm
+            </summary>
+      <param name="valueMmMarning">value in mm</param>
+    </member>
+    <member name="T:SautinSoft.ExcelToPdf.CPageStyle.CPageOrientation">
+      <summary>
+            Allows to set page orientation for an output document. Not used if page size set as "Auto".
+            </summary>
+    </member>
+    <member name="M:SautinSoft.ExcelToPdf.CPageStyle.CPageOrientation.#ctor">
+      <summary>
+            Creates a new instance of <see cref="T:SautinSoft.ExcelToPdf.CPageStyle.CPageOrientation" /> class. Default value: <see cref="M:SautinSoft.ExcelToPdf.CPageStyle.CPageOrientation.Auto" />.
+            </summary>
+    </member>
+    <member name="M:SautinSoft.ExcelToPdf.CPageStyle.CPageOrientation.Portrait">
+      <summary>
+            Set portrait page orientation
+            </summary>
+    </member>
+    <member name="M:SautinSoft.ExcelToPdf.CPageStyle.CPageOrientation.Landscape">
+      <summary>
+            Set landscape page orientation
+            </summary>
+    </member>
+    <member name="M:SautinSoft.ExcelToPdf.CPageStyle.CPageOrientation.Auto">
+      <summary>
+            Set the orientation of the document content. This is the default option.
+            </summary>
+    </member>
+    <member name="P:SautinSoft.ExcelToPdf.CPageStyle.PageSize">
+      <summary>
+            Set page size. Default option: <see cref="M:SautinSoft.ExcelToPdf.CPageStyle.CPageSize.Auto" />.
+            </summary>
+    </member>
+    <member name="P:SautinSoft.ExcelToPdf.CPageStyle.PageScale">
+      <summary>
+            Set page scale. Default option: <see cref="M:SautinSoft.ExcelToPdf.CPageStyle.CPageScale.FitByWidth" /></summary>
+    </member>
+    <member name="P:SautinSoft.ExcelToPdf.CPageStyle.PageOrientation">
+      <summary>
+            Set page orientation. Default option: <see cref="M:SautinSoft.ExcelToPdf.CPageStyle.CPageOrientation.Auto" /></summary>
+    </member>
+    <member name="P:SautinSoft.ExcelToPdf.CPageStyle.PageMarginLeft">
+      <summary>
+            Set left page margin. Default value: 20 millimeters
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\Excel to PDF .Net\Code samples\CSharp\04. Properties and Settings\08. Specify page size and margins\Sample.cs" title="Specify page size and margins for the output PDF document in C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\Excel to PDF .Net\Code samples\VB.Net\04. Properties and Settings\08. Specify page size and margins\Sample.vb" title="Specify page size and margins for the output PDF document in VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="P:SautinSoft.ExcelToPdf.CPageStyle.PageMarginRight">
+      <summary>
+            Set right page margin. Default value: 20 millimeters
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\Excel to PDF .Net\Code samples\CSharp\04. Properties and Settings\08. Specify page size and margins\Sample.cs" title="Specify page size and margins for the output PDF document in C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\Excel to PDF .Net\Code samples\VB.Net\04. Properties and Settings\08. Specify page size and margins\Sample.vb" title="Specify page size and margins for the output PDF document in VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="P:SautinSoft.ExcelToPdf.CPageStyle.PageMarginTop">
+      <summary>
+            Set top page margin. Default value: 30 millimeters.
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\Excel to PDF .Net\Code samples\CSharp\04. Properties and Settings\08. Specify page size and margins\Sample.cs" title="Specify page size and margins for the output PDF document in C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\Excel to PDF .Net\Code samples\VB.Net\04. Properties and Settings\08. Specify page size and margins\Sample.vb" title="Specify page size and margins for the output PDF document in VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="P:SautinSoft.ExcelToPdf.CPageStyle.PageMarginBottom">
+      <summary>
+            Set bottom page margin. Default value: 30 millimeters.
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\Excel to PDF .Net\Code samples\CSharp\04. Properties and Settings\08. Specify page size and margins\Sample.cs" title="Specify page size and margins for the output PDF document in C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\Excel to PDF .Net\Code samples\VB.Net\04. Properties and Settings\08. Specify page size and margins\Sample.vb" title="Specify page size and margins for the output PDF document in VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="P:SautinSoft.ExcelToPdf.CPageStyle.PageNumFormat">
+      <summary>
+             Allows to set custom page numbers in produced document. By default: Page numbers located at the bottom-right of page and font face is "Helvetica" and font size is "10".
+             </summary>
+      <remarks>Using this property you may set custom page numbers as you wish.<br /><br />            
+             These are special keywords to custom page numbers in property Text:<br /><br /><b>{page}</b> - current page number<br /><b>{numpages}</b> - total pages<br />
+             By default: Page numbers located at the bottom-right of page and font face is "Helvetica" and font size is "10".<br /><br />
+             These are samples of using this property:<br /><br />
+             x.PageStyle.PageNumFormat.Text="Page {page} of {numpages}";<br /><br /></remarks>
+      <example>
+        <code lang="cs" source="..\Packages\Excel to PDF .Net\Code samples\CSharp\04. Properties and Settings\01. Add page numbers in the resulting PDF\Sample.cs" title="Add page numbers in the resulting PDF using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\Excel to PDF .Net\Code samples\VB.Net\04. Properties and Settings\01. Add page numbers in the resulting PDF\Sample.vb" title="Add page numbers in the resulting PDF using VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.ExcelToPdf.CPageStyle.#ctor">
+      <summary>
+            Creates a new instance of <see cref="T:SautinSoft.ExcelToPdf.CPageStyle" /> class 
+            </summary>
+    </member>
+    <member name="T:SautinSoft.ExcelToPdf.CPageStyle.Sizes">
+      <summary>
+            Class to set the component's options in inches, mm and pixels.
+            </summary>
+    </member>
+    <member name="M:SautinSoft.ExcelToPdf.CPageStyle.Sizes.#ctor">
+      <summary>
+            Creates an instance of the Sizes class.
+            </summary>
+    </member>
+    <member name="M:SautinSoft.ExcelToPdf.CPageStyle.Sizes.FromMm(System.Single)">
+      <summary>
+            Get Sizes object from mm.
+            </summary>
+      <param name="mm">Value in mm.</param>
+      <returns>
+            New size with the set value in millimeter.
+            </returns>
+    </member>
+    <member name="M:SautinSoft.ExcelToPdf.CPageStyle.Sizes.FromInch(System.Single)">
+      <summary>
+            Get Sizes object from inches.
+            </summary>
+      <param name="inch">Value in inches.</param>
+      <returns>
+            New size with the set value in inches.
+            </returns>
+    </member>
+    <member name="M:SautinSoft.ExcelToPdf.CPageStyle.Sizes.FromPix(System.Single)">
+      <summary>
+            Get Sizes object from pixes.
+            </summary>
+      <param name="pix">Value in px.</param>
+      <returns>
+            New size with the set value in pixes.
+            </returns>
+    </member>
+    <member name="M:SautinSoft.ExcelToPdf.CPageStyle.Sizes.op_Addition(SautinSoft.ExcelToPdf.CPageStyle.Sizes,SautinSoft.ExcelToPdf.CPageStyle.Sizes)">
+      <summary>
+            Allows to concatenate two Sizes objects.
+            </summary>
+      <param name="sz1">Sizes object1.</param>
+      <param name="sz2">Sizes object2</param>
+      <returns>
+            New size with concatenate two Sizes objects.
+            </returns>
+    </member>
+    <member name="P:SautinSoft.ExcelToPdf.CPageStyle.Sizes.Pix">
+      <summary>
+            Value in pixels.
+            </summary>
+    </member>
+    <member name="P:SautinSoft.ExcelToPdf.CPageStyle.Sizes.Mm">
+      <summary>
+            Value in mm.
+            </summary>
+    </member>
+    <member name="P:SautinSoft.ExcelToPdf.CPageStyle.Sizes.Inch">
+      <summary>
+            Value in inches.
+            </summary>
+    </member>
+    <member name="T:SautinSoft.ExcelToPdf.CPageStyle.PageNumbers">
+      <summary>
+            Allows to set page numbers and their properties in PDF.
+            </summary>
+    </member>
+    <member name="P:SautinSoft.ExcelToPdf.CPageStyle.PageNumbers.Text">
+      <summary>
+            Set a custom page numbers in produced PDF document. Default value: "".
+            </summary>
+      <remarks>
+            Default value: empty string<br /><br />
+            Using this property you may set custom page numbers as you wish.<br /><br /> 
+            These are special keywords to custom page numbers:<br /><br /><b>{page}</b> - current page number<br /><b>{numpages}</b> - total pages<br /></remarks>
+      <example>
+        <code lang="cs" source="..\Packages\Excel to PDF .Net\Code samples\CSharp\04. Properties and Settings\01. Add page numbers in the resulting PDF\sample.cs" title="How to set page numbers in the output PDF document">
+        </code>
+        <code lang="vbnet" source="..\Packages\Excel to PDF .Net\Code samples\VB.Net\04. Properties and Settings\01. Add page numbers in the resulting PDF\Sample.vb" title="How to set page numbers in the output PDF document">
+        </code>
+      </example>
+    </member>
+    <member name="P:SautinSoft.ExcelToPdf.CPageStyle.PageNumbers.StartingNumber">
+      <summary>
+            Sets and gets the value for {page} field of <see cref="P:SautinSoft.ExcelToPdf.CPageStyle.PageNumbers.Text" /> property. Default value: 0.
+            </summary>
+    </member>
+    <member name="P:SautinSoft.ExcelToPdf.CPageStyle.PageNumbers.TotalPages">
+      <summary>
+            Sets and gets the value for {numpages} field of <see cref="P:SautinSoft.ExcelToPdf.CPageStyle.PageNumbers.Text" /> property. Default value: 0.
+            </summary>
+    </member>
+    <member name="P:SautinSoft.ExcelToPdf.CPageStyle.PageNumbers.PosX">
+      <summary>
+            Set a position by horizontal for page numbering string. Default value: 0.
+            </summary>
+    </member>
+    <member name="P:SautinSoft.ExcelToPdf.CPageStyle.PageNumbers.PosY">
+      <summary>
+            Set a position by vertical for page numbering string. Default value: 0.
+            </summary>
+    </member>
+    <member name="P:SautinSoft.ExcelToPdf.CPageStyle.PageNumbers.FontFace">
+      <summary>
+            Set a custom font face for page numbers. Default value: "Times".
+            </summary>
+    </member>
+    <member name="P:SautinSoft.ExcelToPdf.CPageStyle.PageNumbers.FontSize">
+      <summary>
+            Set a custom font size for page numbers. Default value: 10.
+            </summary>
+    </member>
+    <member name="P:SautinSoft.ExcelToPdf.CPageStyle.PageNumbers.FontColor">
+      <summary>
+            Set a custom font color for page numbers. Default value: Black.
+            </summary>
+    </member>
+    <member name="M:SautinSoft.ExcelToPdf.CPageStyle.PageNumbers.#ctor">
+      <summary>
+            Creates an instance of PageNumbers class.
+            </summary>
+    </member>
+    <member name="T:SautinSoft.ExcelToPdf.CUnicodeOptions">
+      <summary>
+            Class with properties which allows to specify Unicode options, such as "Fonts" directory etc
+            </summary>
+      <remarks>Use properties from this class only through the property <see cref="P:SautinSoft.ExcelToPdf.UnicodeOptions" />
+            See picture:<br /><br /></remarks>
+      <example>
+        <code>
+            SautinSoft.ExcelToPdf p = new SautinSoft.ExcelToPdf();
+            p.UnicodeOptions.DetectFontsDirectory = SautinSoft.ExcelToPdf.CUnicodeOptions.eUnicodeDetectFontsDirectory.Auto;
+            //p.UnicodeOptions.FontsDirectory = @"c:\windows\fonts\";
+            p.UnicodeOptions.FontsDirectory = Path.Combine(Server.MapPath(""), @"Fonts\");
+            </code>
+        <code lang="vbnet">
+            Dim p As New SautinSoft.ExcelToPdf()
+            p.UnicodeOptions.DetectFontsDirectory = SautinSoft.ExcelToPdf.CUnicodeOptions.eUnicodeDetectFontsDirectory.Auto
+            'p.UnicodeOptions.FontsDirectory = @"c:\windows\fonts\";
+            p.UnicodeOptions.FontsDirectory = Path.Combine(Server.MapPath(""), "Fonts\")
+            </code>
+      </example>
+    </member>
+    <member name="T:SautinSoft.ExcelToPdf.CUnicodeOptions.eUnicodeDetectFontsDirectory">
+      <summary>
+            Allows to specify type of finding *.tff files. This is necessary to insert Unicode inside PDF.
+            </summary>
+      <remarks>
+        <b>Advice for developers who creates ASP.Net or Silverlight projects:</b>
+        <br />
+        <br />
+            Some hosting providers disables any access to windows directories. For example, GoDaddy doesn't allow to read directory "Windows\Fonts". <br />
+            We recommend to create own "Fonts" directory in your project and copy *.ttf files to it from "Windows\Fonts". You may copy only several fonts, but we recommend to put the font "Arial Unicode MS" - ARIALUNI.TTF anyway.<br /><br />
+            See picture:<br /><br /></remarks>
+    </member>
+    <member name="F:SautinSoft.ExcelToPdf.CUnicodeOptions.eUnicodeDetectFontsDirectory.Auto">
+      <summary>
+            First tries to find the "Windows\Fonts" directory and in case of failure uses the directory from <see cref="P:SautinSoft.ExcelToPdf.CUnicodeOptions.FontsDirectory" /> property
+            <remarks>In case of success finding directory "Windows\Fonts" the component will not search *.tff in Custom directory specified in <see cref="P:SautinSoft.ExcelToPdf.CUnicodeOptions.FontsDirectory" />. Therefore some *.ttf files located in custom directory can be missed.</remarks></summary>
+    </member>
+    <member name="F:SautinSoft.ExcelToPdf.CUnicodeOptions.eUnicodeDetectFontsDirectory.NotDetect">
+      <summary>
+            Unicode is disabled. Doesn't make any tries of reading HDD to find *.ttf files.
+            </summary>
+    </member>
+    <member name="F:SautinSoft.ExcelToPdf.CUnicodeOptions.eUnicodeDetectFontsDirectory.Custom">
+      <summary>
+            Doesn't try to find the "Windows\Fonts" directory and uses only the directory from <see cref="P:SautinSoft.ExcelToPdf.CUnicodeOptions.FontsDirectory" /> property to find all .ttf files
+            </summary>
+    </member>
+    <member name="P:SautinSoft.ExcelToPdf.CUnicodeOptions.DetectFontsDirectory">
+      <summary>
+            Allows to specify type of finding *.tff files. This is necessary to insert Unicode inside PDF. Default value: <see cref="F:SautinSoft.ExcelToPdf.CUnicodeOptions.eUnicodeDetectFontsDirectory.Auto" /></summary>
+      <remarks>
+            Default value: <see cref="F:SautinSoft.ExcelToPdf.CUnicodeOptions.eUnicodeDetectFontsDirectory.Auto" />
+            Possible values: <br /><br /><see cref="F:SautinSoft.ExcelToPdf.CUnicodeOptions.eUnicodeDetectFontsDirectory.Auto" /> - First tries to find the "Windows\Fonts" directory and in case of failure uses the directory from <see cref="P:SautinSoft.ExcelToPdf.CUnicodeOptions.FontsDirectory" /> property.
+            In case of success finding directory "Windows\Fonts" the component will not search *.tff in Custom directory specified in <see cref="P:SautinSoft.ExcelToPdf.CUnicodeOptions.FontsDirectory" />. Therefore some *.ttf files located in custom directory can be missed.
+            <br /><br /><see cref="F:SautinSoft.ExcelToPdf.CUnicodeOptions.eUnicodeDetectFontsDirectory.NotDetect" /> - Unicode is disabled. Doesn't make any tries of reading HDD to find *.ttf files.
+            <br /><br /><see cref="F:SautinSoft.ExcelToPdf.CUnicodeOptions.eUnicodeDetectFontsDirectory.Custom" /> - Doesn't try to find the "Windows\Fonts" directory and uses only the directory from <see cref="P:SautinSoft.ExcelToPdf.CUnicodeOptions.FontsDirectory" /> property to find all .ttf files.
+            <br /><br /><b>Advice for developers who creates ASP.Net or Silverlight projects:</b><br /><br />
+            Some hosting providers disables any access to windows directories. For example, GoDaddy doesn't allow to read directory "Windows\Fonts". <br />
+            We recommend to create own "Fonts" directory in your project and copy *.ttf files to it from "Windows\Fonts". You may copy only several fonts, but we recommend to put the font "Arial Unicode MS" - ARIALUNI.TTF anyway.<br /><br /></remarks>
+      <example>
+        <code>
+            SautinSoft.ExcelToPdf p = new SautinSoft.ExcelToPdf();
+            p.UnicodeOptions.DetectFontsDirectory = SautinSoft.ExcelToPdf.CUnicodeOptions.eUnicodeDetectFontsDirectory.Custom;
+            //p.UnicodeOptions.FontsDirectory = @"c:\windows\fonts\";
+            p.UnicodeOptions.FontsDirectory = Path.Combine(Server.MapPath(""), @"Fonts\");
+            </code>
+        <code lang="vbnet">
+            Dim p As New SautinSoft.ExcelToPdf()
+            p.UnicodeOptions.DetectFontsDirectory = SautinSoft.ExcelToPdf.CUnicodeOptions.eUnicodeDetectFontsDirectory.Custom
+            'p.UnicodeOptions.FontsDirectory = @"c:\windows\fonts\";
+            p.UnicodeOptions.FontsDirectory = Path.Combine(Server.MapPath(""), "Fonts\")
+            </code>
+      </example>
+    </member>
+    <member name="P:SautinSoft.ExcelToPdf.CUnicodeOptions.FontsDirectory">
+      <summary>
+            Full local path to fonts directory (any folder with  *.ttf files). Default value: "c:\windows\fonts\"
+            </summary>
+      <remarks>By default it's set to "c:\windows\fonts\"<br /><br /><b>Advice for developers who creates ASP.Net or Silverlight projects:</b><br /><br />
+            Some hosting providers disables any access to windows directories. For example, GoDaddy doesn't allow to read directory "Windows\Fonts". <br />
+            We recommend to create own "Fonts" directory in your project and copy *.ttf files to it from "Windows\Fonts". You may copy only several fonts, but we recommend to put the font "Arial Unicode MS" - ARIALUNI.TTF anyway.<br /><br /></remarks>
+      <example>
+        <code>
+            SautinSoft.ExcelToPdf p = new SautinSoft.ExcelToPdf();
+            p.UnicodeOptions.DetectFontsDirectory = SautinSoft.ExcelToPdf.CUnicodeOptions.eUnicodeDetectFontsDirectory.Custom;
+            //p.UnicodeOptions.FontsDirectory = @"c:\windows\fonts\";
+            p.UnicodeOptions.FontsDirectory = Path.Combine(Server.MapPath(""), @"Fonts\");
+            </code>
+        <code lang="vbnet">
+            Dim p As New SautinSoft.ExcelToPdf()
+            p.UnicodeOptions.DetectFontsDirectory = SautinSoft.ExcelToPdf.CUnicodeOptions.eUnicodeDetectFontsDirectory.Custom
+            'p.UnicodeOptions.FontsDirectory = @"c:\windows\fonts\";
+            p.UnicodeOptions.FontsDirectory = Path.Combine(Server.MapPath(""), "Fonts\")
+            </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.ExcelToPdf.CUnicodeOptions.#ctor">
+      <summary>
+            Creates an instance of class <see cref="T:SautinSoft.ExcelToPdf.CUnicodeOptions" />.
+            </summary>
+      <remarks>Default values:<br /><br />
+            FontsDirectory = @"c:\windows\fonts\";<br />
+            DetectFontsDirectory = SautinSoft.ExcelToPdf.CUnicodeOptions.eUnicodeDetectFontsDirectory.Custom;
+            <br /><br /><b>Advice for developers who creates ASP.Net or Silverlight projects:</b><br /><br />
+            Some hosting providers disables any access to windows directories. For example, GoDaddy doesn't allow to read directory "Windows\Fonts". <br />
+            We recommend to create own "Fonts" directory in your project and copy *.ttf files to it from "Windows\Fonts". You may copy only several fonts, but we recommend to put the font "Arial Unicode MS" - ARIALUNI.TTF anyway.<br /><br /></remarks>
+    </member>
+    <member name="T:SautinSoft.ExcelToPdf.COptions">
+      <summary>
+            Set up the info block properties for resulting documents, such as file version and document producer
+            </summary>
+    </member>
+    <member name="T:SautinSoft.ExcelToPdf.COptions.ePdfVersion">
+      <summary>
+            Allows to specify PDF version
+            </summary>
+    </member>
+    <member name="F:SautinSoft.ExcelToPdf.COptions.ePdfVersion.PDF_12">
+      <summary>
+            The output file will comply with the PDF 1.2 standard.
+            </summary>
+    </member>
+    <member name="F:SautinSoft.ExcelToPdf.COptions.ePdfVersion.PDF_13">
+      <summary>
+            The output file will comply with the PDF 1.3 standard.
+            </summary>
+    </member>
+    <member name="F:SautinSoft.ExcelToPdf.COptions.ePdfVersion.PDF_14">
+      <summary>
+            The output file will comply with the PDF 1.4 standard.
+            </summary>
+    </member>
+    <member name="F:SautinSoft.ExcelToPdf.COptions.ePdfVersion.PDF_15">
+      <summary>
+            The output file will comply with the PDF 1.5 standard.
+            </summary>
+    </member>
+    <member name="F:SautinSoft.ExcelToPdf.COptions.ePdfVersion.PDF_16">
+      <summary>
+            The output file will comply with the PDF 1.6 standard.
+            </summary>
+    </member>
+    <member name="F:SautinSoft.ExcelToPdf.COptions.ePdfVersion.PDF_17">
+      <summary>
+            The output file will comply with the PDF 1.7 standard.
+            </summary>
+    </member>
+    <member name="F:SautinSoft.ExcelToPdf.COptions.ePdfVersion.PDF_A1a">
+      <summary>
+            The output file will comply with the PDF/A-1a 
+            (see <a href="http://en.wikipedia.org/wiki/PDF/A" target="_blank">http://en.wikipedia.org/wiki/PDF/A</a>)
+            standard.
+            </summary>
+    </member>
+    <member name="F:SautinSoft.ExcelToPdf.COptions.ePdfVersion.PDF_A1b">
+      <summary>
+            The output file will comply with the PDF/A-1b
+            (see <a href="http://en.wikipedia.org/wiki/PDF/A" target="_blank">http://en.wikipedia.org/wiki/PDF/A</a>)
+            standard.
+            </summary>
+    </member>
+    <member name="F:SautinSoft.ExcelToPdf.COptions.ePdfVersion.PDF_A2a">
+      <summary>
+            The output file will comply with the PDF/A-2a 
+            (see <a href="http://en.wikipedia.org/wiki/PDF/A" target="_blank">http://en.wikipedia.org/wiki/PDF/A</a>)
+            standard.
+            </summary>
+    </member>
+    <member name="F:SautinSoft.ExcelToPdf.COptions.ePdfVersion.PDF_A2b">
+      <summary>
+            The output file will comply with the PDF/A-2b
+            (see <a href="http://en.wikipedia.org/wiki/PDF/A" target="_blank">http://en.wikipedia.org/wiki/PDF/A</a>)
+            standard.
+            </summary>
+    </member>
+    <member name="F:SautinSoft.ExcelToPdf.COptions.ePdfVersion.PDF_A2u">
+      <summary>
+            The output file will comply with the PDF/A-2u
+            (see <a href="http://en.wikipedia.org/wiki/PDF/A" target="_blank">http://en.wikipedia.org/wiki/PDF/A</a>)
+            standard.
+            </summary>
+    </member>
+    <member name="F:SautinSoft.ExcelToPdf.COptions.ePdfVersion.PDF_A3a">
+      <summary>
+            The output file will comply with the PDF/A-3a 
+            (see <a href="http://en.wikipedia.org/wiki/PDF/A" target="_blank">http://en.wikipedia.org/wiki/PDF/A</a>)
+            standard.
+            </summary>
+    </member>
+    <member name="F:SautinSoft.ExcelToPdf.COptions.ePdfVersion.PDF_A3b">
+      <summary>
+            The output file will comply with the PDF/A-3b
+            (see <a href="http://en.wikipedia.org/wiki/PDF/A" target="_blank">http://en.wikipedia.org/wiki/PDF/A</a>)
+            standard.
+            </summary>
+    </member>
+    <member name="F:SautinSoft.ExcelToPdf.COptions.ePdfVersion.PDF_A3u">
+      <summary>
+            The output file will comply with the PDF/A-3u
+            (see <a href="http://en.wikipedia.org/wiki/PDF/A" target="_blank">http://en.wikipedia.org/wiki/PDF/A</a>)
+            standard.
+            </summary>
+    </member>
+    <member name="P:SautinSoft.ExcelToPdf.COptions.PdfSecurity">
+      <summary>
+            Sets the password in the resulting PDF file.
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\Excel to PDF .Net\Code samples\CSharp\04. Properties and Settings\04. Make a password in resulting PDF\Sample.cs" title="Make a password in resulting PDF (C#)">
+        </code>
+        <code lang="vbnet" source="..\Packages\Excel to PDF .Net\Code samples\VB.Net\04. Properties and Settings\04. Make a password in resulting PDF\Sample.vb" title="Make a password in resulting PDF (VB.Net)">
+        </code>
+      </example>
+    </member>
+    <member name="P:SautinSoft.ExcelToPdf.COptions.PdfVersion">
+      <summary>
+            Set version for produced PDF document. Default value: <see cref="F:SautinSoft.ExcelToPdf.COptions.ePdfVersion.PDF_14" />.
+            </summary>
+    </member>
+    <member name="T:SautinSoft.ExcelToPdf.COptions.Formula">
+      <summary>
+             When processing formulas of the type - "CELL("filename", A1)" it is necessary to specify the path to the current file (stream) to ensure correct processing of the action.
+            By default: Stream
+            For example(File) : ExcelToPdf.ConvertFile(ExcelDocument, pdfFile); 
+            For example(Stream): ExcelToPdf.ConvertBytes(bytes);
+             </summary>
+    </member>
+    <member name="F:SautinSoft.ExcelToPdf.COptions.Formula.InputFilePath">
+      <summary>
+             When processing formulas of the type - "CELL("filename", A1)" it is necessary to specify the path to the current file (stream) to ensure correct processing of the action.
+            By default: Stream
+            For example(File) : ExcelToPdf.ConvertFile(ExcelDocument, pdfFile); 
+            For example(Stream): ExcelToPdf.ConvertBytes(bytes);
+             </summary>
+    </member>
+    <member name="F:SautinSoft.ExcelToPdf.COptions.FormulaOptions">
+      <summary>
+             When processing formulas of the type - "CELL("filename", A1)" it is necessary to specify the path to the current file (stream) to ensure correct processing of the action.
+            By default: Stream
+            For example(File) : ExcelToPdf.ConvertFile(ExcelDocument, pdfFile); 
+            For example(Stream): ExcelToPdf.ConvertBytes(bytes);
+             </summary>
+    </member>
+    <member name="P:SautinSoft.ExcelToPdf.COptions.Producer">
+      <summary>
+            Set producer in an output document. Default value: "SautinSoft Company".
+            </summary>
+    </member>
+    <member name="P:SautinSoft.ExcelToPdf.COptions.CultureInfo">
+      <summary>
+            Set the CultureInfo for using in document. Default value: null (like a document or in a server or a computer).
+            </summary>
+    </member>
+    <member name="T:SautinSoft.ExcelToPdf.PdfSecurity">
+      <summary>
+            Contains details for encrypting and access permissions for a PDF document, such as Password, Permissions etc.
+            </summary>
+    </member>
+    <member name="P:SautinSoft.ExcelToPdf.PdfSecurity.EncryptionAlgorithm">
+      <summary>
+            Specifies the encryption algorithm to use.
+            The default value is <see cref="F:SautinSoft.ExcelToPdf.PdfEncryptionAlgorithm.RC4_40" />.
+            </summary>
+    </member>
+    <member name="P:SautinSoft.ExcelToPdf.PdfSecurity.OwnerPassword">
+      <summary>
+            Specifies the owner password for the encrypted PDF document.
+            </summary>
+      <remarks>
+        <para>
+            The owner password allows the user to open an encrypted PDF document without any
+            access restrictions specified in <see cref="P:SautinSoft.Document.PdfEncryptionDetails.Permissions" />.
+            </para>
+        <para>
+            The owner password cannot be the same as the user password. If you don't specify an 
+            owner password, then the system will generate a random password when generating the PDF document.
+            </para>
+      </remarks>
+    </member>
+    <member name="P:SautinSoft.ExcelToPdf.PdfSecurity.UserPassword">
+      <summary>
+            Specifies the user password required for opening the encrypted PDF document.
+            </summary>
+      <remarks>
+        <para>
+            The user password will be required to open an encrypted PDF document for viewing.
+            The permissions specified in <see cref="P:SautinSoft.Document.PdfEncryptionDetails.Permissions" />
+            will be enforced by the reader software.
+            </para>
+        <para>
+            The user password can be null or empty string, in this case no password will be
+            required from the user when opening the PDF document. The user password cannot be
+            the same as the owner password.
+            </para>
+      </remarks>
+    </member>
+    <member name="P:SautinSoft.ExcelToPdf.PdfSecurity.Permissions">
+      <summary>
+            Specifies the operations that are allowed to a user on an encrypted PDF document. 
+            The default value is <see cref="F:SautinSoft.ExcelToPdf.PdfPermissions.DisallowAll" />.
+            </summary>
+    </member>
+    <member name="T:SautinSoft.ExcelToPdf.eOutputFormat">
+      <summary>
+            Enumerator with types of produced documents: PDF, DOCX, RTF
+            </summary>
+      <example>
+        <code lang="cs" source="..\Packages\Excel to PDF .Net\Code samples\CSharp\02. Excel to DOCX\01. Convert Excel file to DOCX file\Sample.cs" title="Convert Excel file to DOCX file in C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\Excel to PDF .Net\Code samples\VB.Net\02. Excel to DOCX\01. Convert Excel file to DOCX file\Sample.vb" title="Convert Excel file to DOCX file in VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="F:SautinSoft.ExcelToPdf.eOutputFormat.Pdf">
+      <summary>
+            Set PDF as output document, *.pdf
+            </summary>
+    </member>
+    <member name="F:SautinSoft.ExcelToPdf.eOutputFormat.Word">
+      <summary>
+            Set Word (*.doc) as output document, *.doc
+            </summary>
+    </member>
+    <member name="F:SautinSoft.ExcelToPdf.eOutputFormat.Rtf">
+      <summary>
+            Set RTF as output document, *.rtf
+            </summary>
+    </member>
+    <member name="F:SautinSoft.ExcelToPdf.eOutputFormat.Docx">
+      <summary>
+            Set DOCX as output document, *.docx
+            </summary>
+    </member>
+    <member name="T:SautinSoft.ExcelToPdf.PdfPermissions">
+      <summary>
+            Specifies the operations that are allowed to a user on an encrypted PDF document.
+            </summary>
+    </member>
+    <member name="F:SautinSoft.ExcelToPdf.PdfPermissions.DisallowAll">
+      <summary>
+            Disallows all operations on the PDF document. This is the default value.
+            </summary>
+    </member>
+    <member name="F:SautinSoft.ExcelToPdf.PdfPermissions.AllowAll">
+      <summary>
+            Allows all operations on the PDF document.
+            </summary>
+    </member>
+    <member name="F:SautinSoft.ExcelToPdf.PdfPermissions.ContentCopy">
+      <summary>
+            Allows copying or otherwise extracting text and graphics from the document, 
+            including extraction for accessibility purposes.
+            </summary>
+    </member>
+    <member name="F:SautinSoft.ExcelToPdf.PdfPermissions.ContentCopyForAccessibility">
+      <summary>
+            Allows extract text and graphics in support of accessibility to disabled users 
+            or for other purposes. When using RC4 40-bit encryption, this option is ignored
+            and accessibility is allowed whenever <b>ContentCopy</b> is set.
+            </summary>
+    </member>
+    <member name="F:SautinSoft.ExcelToPdf.PdfPermissions.ModifyContents">
+      <summary>
+            Allows modifying the document’s contents.
+            </summary>
+    </member>
+    <member name="F:SautinSoft.ExcelToPdf.PdfPermissions.ModifyAnnotations">
+      <summary>
+            Allows adding or modifying text annotations. When using RC4 40-bit encryption, 
+            this option also allows filling in form fields.
+            </summary>
+    </member>
+    <member name="F:SautinSoft.ExcelToPdf.PdfPermissions.FillIn">
+      <summary>
+            Allows filling in forms and signing the document. When using RC4 40-bit encryption,
+            this option is ignored and filling in form is allowed whenever <b>ModifyAnnotations</b> is set.
+            </summary>
+    </member>
+    <member name="F:SautinSoft.ExcelToPdf.PdfPermissions.DocumentAssembly">
+      <summary>
+            Allows assembling the document: inserting, rotating, or deleting pages and creating 
+            navigation elements such as bookmarks or thumbnail images. When using RC4 40-bit encryption,
+            this option is ignored and document assembly is allowed when <b>ModifyContents</b> is set.
+            </summary>
+    </member>
+    <member name="F:SautinSoft.ExcelToPdf.PdfPermissions.Printing">
+      <summary>
+            Allows printing the document.
+            </summary>
+    </member>
+    <member name="F:SautinSoft.ExcelToPdf.PdfPermissions.HighResolutionPrinting">
+      <summary>
+            Allows printing the document to the highest resolution possible.
+            When using RC4 40-bit encryption, this option is ignored and high resolution 
+            printing is allowed when <b>Printing</b> is set.
+            </summary>
+    </member>
+    <member name="T:SautinSoft.ExcelToPdf.PdfEncryptionAlgorithm">
+      <summary>
+            Specifies the encryption algorithm to use for encrypting a PDF document.
+            </summary>
+    </member>
+    <member name="F:SautinSoft.ExcelToPdf.PdfEncryptionAlgorithm.RC4_40">
+      <summary>
+            RC4 encryption, key length of 40 bits.
+            </summary>
+    </member>
+    <member name="F:SautinSoft.ExcelToPdf.PdfEncryptionAlgorithm.RC4_128">
+      <summary>
+            RC4 encryption, key length of 128 bits.
+            </summary>
+    </member>
+    <member name="M:SautinSoft.ExcelToPdf.GetSheetsNumber(System.String)">
+      <summary>
+            Returns numbers of sheets from Excel workbook
+            </summary>
+      <param name="excelPath">Path to Excel file</param>
+      <returns>Number of sheets<br />
+            -1 - unable to read workbook 
+            </returns>
+      <example>
+        <code lang="cs" source="..\Packages\Excel to PDF .Net\Code samples\CSharp\04. Properties and Settings\03. Get sheets number\Sample.cs" title="Get number of sheets in Excel workbook in C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\Excel to PDF .Net\Code samples\VB.Net\04. Properties and Settings\03. Get sheets number\Sample.vb" title="Get number of sheets in Excel workbook in VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.ExcelToPdf.GetSheetsNumber(System.Byte[])">
+      <summary>
+            Returns numbers of sheets from Excel workbook
+            </summary>
+      <param name="excelBytes">Array of bytes containing Excel document</param>
+      <returns>Number of sheets<br />
+            -1 - unable to read workbook 
+            </returns>
+      <example>
+        <code lang="cs" source="..\Packages\Excel to PDF .Net\Code samples\CSharp\04. Properties and Settings\03. Get sheets number\Sample.cs" title="Get number of sheets in Excel workbook in C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\Excel to PDF .Net\Code samples\VB.Net\04. Properties and Settings\03. Get sheets number\Sample.vb" title="Get number of sheets in Excel workbook in VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.ExcelToPdf.ConvertFile(System.String,System.String)">
+      <summary>
+            Convert Excel file to PDF, Word file. PDF file will be created by component or overwritten if already exist
+            </summary>
+      <param name="excelPath">Path to Excel file</param>
+      <param name="outPath">Path to output document</param>
+      <example>
+        <code lang="cs" source="..\Packages\Excel to PDF .Net\Code samples\CSharp\01. Excel to PDF\01. Convert Excel file to PDF file\Sample.cs" title="How to convert Excel file to PDF file in C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\Excel to PDF .Net\Code samples\VB.Net\01. Excel to PDF\01. Convert Excel file to PDF file\Sample.vb" title="How to convert Excel file to PDF file in VB.Net">
+        </code>
+      </example>
+    </member>
+    <member name="M:SautinSoft.ExcelToPdf.ConvertByteToFile(System.Byte[],System.String)">
+      <summary>
+            Convert Excel bytes array to PDF, Word, RTF file. Output file will be created by component or overwritten if already exist
+            </summary>
+      <param name="excelBytes">Array of bytes containing Excel document</param>
+      <param name="outPath">Path to output file</param>
+    </member>
+    <member name="M:SautinSoft.ExcelToPdf.ConvertFiletoBytes(System.String)">
+      <summary>
+            Convert Excel file to PDF, Word bytes array
+            </summary>
+      <param name="excelPath">Path to Excel file</param>
+      <returns>
+            Array of bytes with the output document.
+            </returns>
+    </member>
+    <member name="M:SautinSoft.ExcelToPdf.ConvertBytes(System.Byte[])">
+      <summary>
+            Convert Excel bytes array to PDF, Word, RTF bytes array
+            </summary>
+      <param name="excelByte">Array of bytes containing Excel document</param>
+      <returns>
+            Bytes array where output document will be saved after converting. You don't have to allocate memory for this array.        
+            </returns>
+      <example>
+        <code lang="cs" source="..\Packages\Excel to PDF .Net\Code samples\CSharp\01. Excel to PDF\03. Convert Excel to PDF in memory\Sample.cs" title="Convert Excel to PDF in memory using C#">
+        </code>
+        <code lang="vbnet" source="..\Packages\Excel to PDF .Net\Code samples\VB.Net\01. Excel to PDF\03. Convert Excel to PDF in memory\Sample.vb" title="Convert Excel to PDF in memory using VB.Net">
+        </code>
+      </example>
+    </member>
+    <!-- Badly formed XML comment ignored for member "F:SautinSoft.Pdf.Annotations.PdfAnnotationType.Line" -->
+    <!-- Badly formed XML comment ignored for member "F:SautinSoft.Pdf.Annotations.PdfAnnotationType.Square" -->
+    <!-- Badly formed XML comment ignored for member "F:SautinSoft.Pdf.Annotations.PdfAnnotationType.FileAttachment" -->
+    <!-- Badly formed XML comment ignored for member "T:SautinSoft.Pdf.Utils.AdobeCFFReader.Font" -->
+    <!-- Badly formed XML comment ignored for member "T:BidiSharp.BidiPBA" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.Color.ChannelDefinitionMapper.getCompData(CSJ2K.j2k.image.DataBlk,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.Color.ChannelDefinitionMapper.getInternCompData(CSJ2K.j2k.image.DataBlk,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.Color.ChannelDefinitionMapper.getFixedPoint(System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.Color.ColorSpaceMapper.getFixedPoint(System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.Color.ColorSpaceMapper.getCompData(CSJ2K.j2k.image.DataBlk,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.Color.ColorSpaceMapper.getInternCompData(CSJ2K.j2k.image.DataBlk,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.Color.EnumeratedColorSpaceMapper.getCompData(CSJ2K.j2k.image.DataBlk,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.Color.EnumeratedColorSpaceMapper.getInternCompData(CSJ2K.j2k.image.DataBlk,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.Color.EsRgbColorSpaceMapper.getInternCompData(CSJ2K.j2k.image.DataBlk,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.Color.PalettizedColorSpaceMapper.getCompData(CSJ2K.j2k.image.DataBlk,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.Color.PalettizedColorSpaceMapper.ToString" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.Color.PalettizedColorSpaceMapper.getInternCompData(CSJ2K.j2k.image.DataBlk,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.Color.PalettizedColorSpaceMapper.getNomRangeBits(System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.Color.PalettizedColorSpaceMapper.getCompImgHeight(System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.Color.Resampler.getInternCompData(CSJ2K.j2k.image.DataBlk,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.Color.Resampler.getCompData(CSJ2K.j2k.image.DataBlk,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.Color.SYccColorSpaceMapper.getCompData(CSJ2K.j2k.image.DataBlk,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.Color.SYccColorSpaceMapper.getInternCompData(CSJ2K.j2k.image.DataBlk,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.Icc.ICCProfiler.getCompData(CSJ2K.j2k.image.DataBlk,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.Icc.ICCProfiler.getInternCompData(CSJ2K.j2k.image.DataBlk,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.Icc.Tags.ICCTag" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.codestream.ProgressionType" -->
+    <!-- Badly formed XML comment ignored for member "F:CSJ2K.j2k.codestream.reader.PktDecoder.ttIncl" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.codestream.writer.BitOutputBuffer" -->
+    <!-- Badly formed XML comment ignored for member "P:CSJ2K.j2k.codestream.writer.BitOutputBuffer.Length" -->
+    <!-- Badly formed XML comment ignored for member "P:CSJ2K.j2k.codestream.writer.BitOutputBuffer.Buffer" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.codestream.writer.BitOutputBuffer.writeBit(System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.codestream.writer.BitOutputBuffer.writeBits(System.Int32,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.codestream.writer.CodestreamWriter.writePacketHead(System.Byte[],System.Int32,System.Boolean,System.Boolean,System.Boolean)" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.codestream.writer.FileCodestreamWriter" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.codestream.writer.FileCodestreamWriter.writePacketHead(System.Byte[],System.Int32,System.Boolean,System.Boolean,System.Boolean)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.codestream.writer.FileCodestreamWriter.writePacketBody(System.Byte[],System.Int32,System.Boolean,System.Boolean,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "F:CSJ2K.j2k.codestream.writer.PktEncoder.prevtIdxs" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.entropy.CBlkSizeSpec" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.entropy.CBlkSizeSpec.getCBlkWidth(System.Byte,System.Int32,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.entropy.decoder.EntropyDecoder" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.entropy.decoder.EntropyDecoder.getSynSubbandTree(System.Int32,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.entropy.decoder.MQDecoder.fastDecodeSymbols(System.Int32[],System.Int32,System.UInt32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.entropy.decoder.MQDecoder.decodeSymbols(System.Int32[],System.Int32[],System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.entropy.decoder.MQDecoder.decodeSymbol(System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.entropy.decoder.MQDecoder.init" -->
+    <!-- Badly formed XML comment ignored for member "F:CSJ2K.j2k.entropy.decoder.StdEntropyDecoder.state" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.entropy.decoder.StdEntropyDecoder.getCodeBlock(System.Int32,System.Int32,System.Int32,CSJ2K.j2k.wavelet.synthesis.SubbandSyn,CSJ2K.j2k.image.DataBlk)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.entropy.decoder.StdEntropyDecoder.magRefPass(CSJ2K.j2k.image.DataBlk,CSJ2K.j2k.entropy.decoder.MQDecoder,System.Int32,System.Int32[],System.Boolean)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.entropy.decoder.StdEntropyDecoder.rawMagRefPass(CSJ2K.j2k.image.DataBlk,CSJ2K.j2k.entropy.decoder.ByteToBitInput,System.Int32,System.Int32[],System.Boolean)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.entropy.decoder.StdEntropyDecoder.cleanuppass(CSJ2K.j2k.image.DataBlk,CSJ2K.j2k.entropy.decoder.MQDecoder,System.Int32,System.Int32[],System.Int32[],System.Boolean)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.entropy.encoder.EBCOTRateAllocator.getAllCodeBlocks" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.entropy.encoder.EntropyCoder.isReversible(System.Int32,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.entropy.encoder.MQCoder" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.entropy.encoder.MQCoder.fastCodeSymbols(System.Int32,System.Int32,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.entropy.PrecinctSizeSpec" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.fileformat.reader.FileFormatReader.readJP2HeaderBox(System.Int64,System.Int32,System.Int64)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.fileformat.reader.FileFormatReader.readContiguousCodeStreamBox(System.Int64,System.Int32,System.Int64)" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.image.BlkImgDataSrc" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.image.BlkImgDataSrc.getInternCompData(CSJ2K.j2k.image.DataBlk,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.image.BlkImgDataSrc.getCompData(CSJ2K.j2k.image.DataBlk,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.image.ImgData.getNomRangeBits(System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.image.ImgDataAdapter.getNomRangeBits(System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.image.ImgDataConverter.getCompData(CSJ2K.j2k.image.DataBlk,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.image.ImgDataConverter.getInternCompData(CSJ2K.j2k.image.DataBlk,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.image.ImgDataJoiner.#ctor(CSJ2K.j2k.image.BlkImgDataSrc[],System.Int32[])" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.image.ImgDataJoiner.getNomRangeBits(System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.image.ImgDataJoiner.getInternCompData(CSJ2K.j2k.image.DataBlk,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.image.ImgDataJoiner.getCompData(CSJ2K.j2k.image.DataBlk,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.image.input.ImgReaderPGM" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.image.input.ImgReaderPGM.getNomRangeBits(System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.image.input.ImgReaderPGM.getInternCompData(CSJ2K.j2k.image.DataBlk,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.image.input.ImgReaderPGM.getCompData(CSJ2K.j2k.image.DataBlk,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.image.input.ImgReaderPGX" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.image.input.ImgReaderPGX.getNomRangeBits(System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.image.input.ImgReaderPGX.getInternCompData(CSJ2K.j2k.image.DataBlk,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.image.input.ImgReaderPGX.getCompData(CSJ2K.j2k.image.DataBlk,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.image.input.ImgReaderPPM" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.image.input.ImgReaderPPM.getNomRangeBits(System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.image.input.ImgReaderPPM.getInternCompData(CSJ2K.j2k.image.DataBlk,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.image.input.ImgReaderPPM.getCompData(CSJ2K.j2k.image.DataBlk,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.image.invcomptransf.InvCompTransf.getFixedPoint(System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.image.invcomptransf.InvCompTransf.getNomRangeBits(System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.image.invcomptransf.InvCompTransf.getCompData(CSJ2K.j2k.image.DataBlk,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.image.invcomptransf.InvCompTransf.setTile(System.Int32,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.image.invcomptransf.InvCompTransf.nextTile" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.image.output.ImgWriterPGM" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.image.output.ImgWriterPGM.#ctor(System.String,CSJ2K.j2k.image.BlkImgDataSrc,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.image.output.ImgWriterPGX" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.image.output.ImgWriterPGX.#ctor(System.String,CSJ2K.j2k.image.BlkImgDataSrc,System.Int32,System.Boolean)" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.image.output.ImgWriterPPM" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.image.output.ImgWriterPPM.write" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.image.output.ImgWriterPPM.writeHeaderInfo" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.image.Tiler.#ctor(CSJ2K.j2k.image.BlkImgDataSrc,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.io.BinaryDataOutput" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.io.BinaryDataOutput.writeByte(System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.io.BinaryDataOutput.writeShort(System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.io.BufferedRandomAccessFile" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.io.BufferedRandomAccessFile.writeByte(System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.io.EndianType_Fields" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.JJ2KExceptionHandler" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.JJ2KExceptionHandler.handleException(System.Exception)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.ModuleSpec.parseIdx(System.String,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.NotImplementedError" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.NotImplementedError.#ctor" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.quantization.dequantizer.CBlkQuantDataSrcDec" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.quantization.dequantizer.Dequantizer.getNomRangeBits(System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.quantization.dequantizer.Dequantizer.getSynSubbandTree(System.Int32,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.quantization.dequantizer.Dequantizer.setTile(System.Int32,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.quantization.dequantizer.Dequantizer.nextTile" -->
+    <!-- Badly formed XML comment ignored for member "F:CSJ2K.j2k.quantization.dequantizer.StdDequantizerParams.exp" -->
+    <!-- Badly formed XML comment ignored for member "F:CSJ2K.j2k.quantization.dequantizer.StdDequantizerParams.nStep" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.quantization.QuantizationType_Fields" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.quantization.quantizer.Quantizer.getAnSubbandTree(System.Int32,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.quantization.QuantTypeSpec" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.roi.encoder.ArbROIMaskGenerator" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.roi.encoder.ArbROIMaskGenerator.getROIMask(CSJ2K.j2k.image.DataBlkInt,CSJ2K.j2k.wavelet.Subband,System.Int32,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.roi.encoder.ArbROIMaskGenerator.makeMask(CSJ2K.j2k.wavelet.Subband,System.Int32,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.roi.encoder.RectROIMaskGenerator" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.roi.encoder.RectROIMaskGenerator.getROIMask(CSJ2K.j2k.image.DataBlkInt,CSJ2K.j2k.wavelet.Subband,System.Int32,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.roi.encoder.ROIMaskGenerator" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.roi.encoder.ROIScaler" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.roi.ROIDeScaler.getSynSubbandTree(System.Int32,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.StringSpec.#ctor(System.Int32,System.Int32,System.Byte,System.String,System.String[],CSJ2K.j2k.util.ParameterList)" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.util.FacilityManager" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.util.ISRandomAccessIO" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.util.MsgLogger_Fields" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.util.MsgPrinter.nextLineEnd(System.String,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.util.MsgPrinter.nextWord(System.String,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.util.ParameterList.parseArgs(System.String[])" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.util.ThreadPool" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.util.ThreadPool.ThreadPoolThread.Run" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.util.ThreadPool.#ctor(System.Int32,System.Int32,System.String)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.util.ThreadPool.runTarget(IThreadRunnable,System.Object)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.util.ThreadPool.runTarget(IThreadRunnable,System.Object,System.Boolean)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.util.ThreadPool.clearTargetErrors" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.util.ThreadPool.putInIdleList(CSJ2K.j2k.util.ThreadPool.ThreadPoolThread)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.util.ThreadPool.getIdle(System.Boolean)" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.wavelet.analysis.AnWTFilterFloat" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.wavelet.analysis.AnWTFilterFloatLift9x7" -->
+    <!-- Badly formed XML comment ignored for member "P:CSJ2K.j2k.wavelet.analysis.AnWTFilterFloatLift9x7.SynLowNegSupport" -->
+    <!-- Badly formed XML comment ignored for member "P:CSJ2K.j2k.wavelet.analysis.AnWTFilterFloatLift9x7.SynLowPosSupport" -->
+    <!-- Badly formed XML comment ignored for member "P:CSJ2K.j2k.wavelet.analysis.AnWTFilterFloatLift9x7.SynHighNegSupport" -->
+    <!-- Badly formed XML comment ignored for member "P:CSJ2K.j2k.wavelet.analysis.AnWTFilterFloatLift9x7.SynHighPosSupport" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.wavelet.analysis.AnWTFilterFloatLift9x7.analyze_lpf(System.Single[],System.Int32,System.Int32,System.Int32,System.Single[],System.Int32,System.Int32,System.Single[],System.Int32,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.wavelet.analysis.AnWTFilterFloatLift9x7.analyze_hpf(System.Single[],System.Int32,System.Int32,System.Int32,System.Single[],System.Int32,System.Int32,System.Single[],System.Int32,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.wavelet.analysis.AnWTFilterFloatLift9x7.getLPSynthesisFilter" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.wavelet.analysis.AnWTFilterFloatLift9x7.getHPSynthesisFilter" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.wavelet.analysis.AnWTFilterFloatLift9x7.isSameAsFullWT(System.Int32,System.Int32,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.wavelet.analysis.AnWTFilterFloatLift9x7.Equals(System.Object)" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.wavelet.analysis.AnWTFilterInt" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.wavelet.analysis.AnWTFilterIntLift5x3.analyze_hpf(System.Int32[],System.Int32,System.Int32,System.Int32,System.Int32[],System.Int32,System.Int32,System.Int32[],System.Int32,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.wavelet.analysis.AnWTFilterSpec.getHFilters(System.Int32,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.wavelet.analysis.AnWTFilterSpec.getVFilters(System.Int32,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.wavelet.synthesis.CBlkWTDataSrcDec.getNomRangeBits(System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.wavelet.synthesis.InvWTFull.getNomRangeBits(System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.wavelet.synthesis.MultiResImgDataAdapter.getCompImgHeight(System.Int32,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.wavelet.synthesis.SynWTFilter" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.wavelet.synthesis.SynWTFilterFloat" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.wavelet.synthesis.SynWTFilterFloatLift9x7" -->
+    <!-- Badly formed XML comment ignored for member "P:CSJ2K.j2k.wavelet.synthesis.SynWTFilterFloatLift9x7.SynLowNegSupport" -->
+    <!-- Badly formed XML comment ignored for member "P:CSJ2K.j2k.wavelet.synthesis.SynWTFilterFloatLift9x7.SynLowPosSupport" -->
+    <!-- Badly formed XML comment ignored for member "P:CSJ2K.j2k.wavelet.synthesis.SynWTFilterFloatLift9x7.SynHighNegSupport" -->
+    <!-- Badly formed XML comment ignored for member "P:CSJ2K.j2k.wavelet.synthesis.SynWTFilterFloatLift9x7.SynHighPosSupport" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.wavelet.synthesis.SynWTFilterFloatLift9x7.synthetize_lpf(System.Single[],System.Int32,System.Int32,System.Int32,System.Single[],System.Int32,System.Int32,System.Int32,System.Single[],System.Int32,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.wavelet.synthesis.SynWTFilterFloatLift9x7.synthetize_hpf(System.Single[],System.Int32,System.Int32,System.Int32,System.Single[],System.Int32,System.Int32,System.Int32,System.Single[],System.Int32,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.wavelet.synthesis.SynWTFilterFloatLift9x7.isSameAsFullWT(System.Int32,System.Int32,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.wavelet.synthesis.SynWTFilterInt" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.wavelet.WTDecompSpec" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.wavelet.WTDecompSpec.#ctor(System.Int32,System.Int32,System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.wavelet.WTDecompSpec.getDecSpecType(System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.wavelet.WTDecompSpec.getDecompType(System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.wavelet.WTDecompSpec.getLevels(System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "T:CSJ2K.j2k.wavelet.WTFilterSpec" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.wavelet.WTFilterSpec.#ctor(System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "M:CSJ2K.j2k.wavelet.WTFilterSpec.getKerSpecType(System.Int32)" -->
+    <!-- Badly formed XML comment ignored for member "T:jj2000.j2k.util.NativeServices" -->
+    <!-- Badly formed XML comment ignored for member "P:jj2000.j2k.util.NativeServices.ThreadConcurrency" -->
+    <!-- Badly formed XML comment ignored for member "M:SupportClass.Tokenizer.MoveNext" -->
+  </members>
+</doc>
