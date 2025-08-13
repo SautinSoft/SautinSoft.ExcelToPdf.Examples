@@ -20,6 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
+	<PackageReference Include="SautinSoft.ExcelToPdf" Version="*" />
     <PackageReference Include="HarfBuzzSharp.NativeAssets.Linux" Version="7.3.0" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.0" />
 	<PackageReference Include="SkiaSharp" Version="2.88.7" />
@@ -33,14 +34,6 @@
     <PackageReference Include="System.Text.Encoding.CodePages" Version="4.5.0" />
 
   </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="SautinSoft.ExcelToPdf">
-      <HintPath>..\..\..\..\Bin\.NET 6.0\SautinSoft.ExcelToPdf.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-
- 
 
   <ItemGroup>
     <None Update="input.pdf">
